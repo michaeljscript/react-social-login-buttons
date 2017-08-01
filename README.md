@@ -1,6 +1,7 @@
 # React Social Login Buttons
 Simple package to display social login buttons using React
 
+![Social login buttons](https://raw.githubusercontent.com/MichalSzorad/react-social-login-buttons/master/examples/simple/screenshot1.jpg ){:height=150}
 
 ## Importing:
 
