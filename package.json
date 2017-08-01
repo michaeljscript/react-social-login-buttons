@@ -2,9 +2,19 @@
   "name": "react-social-login-buttons",
   "version": "1.0.0",
   "description": "Simple login buttons for React",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel": "babel src/ --out-dir lib/",
+    "build": "npm run babel && npm run example",
+    "build-watch": "nodemon --exec \"npm run build\" --ignore examples/simple/bundle.js --ignore lib/*",
+    "example": "webpack --entry ./examples/simple/index.js --output-path ./examples/simple --output-filename bundle.js",
+    "prepublish": "npm run build"
+  },
+  "browserify-css": {
+    "autoInject": true,
+    "minify": true,
+    "rootDir": "."
   },
   "repository": {
     "type": "git",
@@ -22,5 +32,34 @@
   "bugs": {
     "url": "https://github.com/MichalSzorad/react-social-login-buttons/issues"
   },
-  "homepage": "https://github.com/MichalSzorad/react-social-login-buttons#readme"
+  "homepage": "https://github.com/MichalSzorad/react-social-login-buttons#readme",
+  "dependencies": {
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-react-css-modules": "^3.1.0",
+    "babel-plugin-react-html-attrs": "^2.0.0",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-es2015-destructuring": "^6.23.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "babelify": "^7.3.0",
+    "browserify": "^14.4.0",
+    "browserify-css": "^0.11.1",
+    "css-loader": "^0.28.4",
+    "nodemon": "^1.11.0",
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.4.1"
+  }
 }
