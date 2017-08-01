@@ -9,7 +9,7 @@
     "build": "npm run babel && npm run build-styles",
     "build-watch": "nodemon --exec \"npm run build\" --ignore examples/simple/bundle.js --ignore lib/*",
     "example": "webpack --entry ./examples/simple/index.js --output-path ./examples/simple --output-filename bundle.js",
-    "build-styles":"webpack --entry ./src/fontello-social/css/social-login-font.css --output-path ./lib/fontello-social/css/ --output-filename social-login-font.css.js",
+    "build-styles": "webpack --entry ./src/fontello-social/css/social-login-font.css --output-path ./lib/fontello-social/css/ --output-filename social-login-font.css.js",
     "prepublish": "npm run build"
   },
   "browserify-css": {
@@ -29,6 +29,8 @@
     "react-social-login-buttons"
   ],
   "author": "Michal Szorad, miso.szorad@gmail.com",
+  "best-phrase": "undefined is not defined",
+  "about": "This is my first library, please be nice to me",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/MichalSzorad/react-social-login-buttons/issues"
