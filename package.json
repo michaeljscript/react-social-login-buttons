@@ -1,6 +1,6 @@
 {
   "name": "react-social-login-buttons",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Simple login buttons for React",
   "main": "./lib/index.js",
   "scripts": {
