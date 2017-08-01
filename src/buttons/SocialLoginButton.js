@@ -73,7 +73,6 @@ const styles = {
         boxShadow: '#b5b5b5 0 1px 2px',
         borderRadius: 3,
         userSelect: 'none',
-        fontFamily: 'sans-serif',
         lineHeight: '50px'
     },
     icon: {
