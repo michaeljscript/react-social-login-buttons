@@ -1,9 +1,15 @@
 # React Social Login Buttons
 Simple package to display social login buttons using React
 
-![Social login buttons](https://raw.githubusercontent.com/MichalSzorad/react-social-login-buttons/master/examples/simple/screenshot1.jpg ){:height=150}
+![Social login buttons](https://raw.githubusercontent.com/MichalSzorad/react-social-login-buttons/master/examples/simple/screenshot1.jpg )
 
-## Importing:
+## Install
+npm
+```
+npm install --save react-social-login-buttons
+```
+
+## Importing
 
 ES6 imports:
 ```js
@@ -15,7 +21,7 @@ ES6 imports optimized:
 import FacebookLoginButton from 'react-social-login-buttons/lib/buttons/FacebookLoginButton';
 ```
 
-## Usage:
+## Usage
 
 Every social login button extends SocialLoginButton.
 
@@ -53,23 +59,24 @@ We currently support just a few login buttons. Others will be implemented later.
 ```
 
 ## Props
+Props for every Button
 
-#### `onClick` {function} (optional)
+### `onClick` {function} (optional)
 Will be triggered when clicked on the button.
 
-### `text` {String} (optional),
+### `text` {String} (optional)
 This text will be displayed
 
 ### `style` {Object} (optional)
 Custom button styles
 
-### `activeStyle` {Object} (optional),
+### `activeStyle` {Object} (optional)
 activeStyle styles will be applied instead of style when mouse hovers above the element
 
 ### `icon` {String} (optional)
 This icon will be displayed. We use a special font package to minimize the traffic. Only necessary icons are imported.
 
-### `iconSize` {String} (optional),
+### `iconSize` {String} (optional)
 Icon will have this size. Eg. "26px"
 
 ### `iconFormat` {function} (optional)
