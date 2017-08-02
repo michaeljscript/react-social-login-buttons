@@ -58,6 +58,11 @@ We currently support just a few login buttons. Others will be implemented later.
 <TwitterLoginButton onClick={() => alert('Hello')} />
 ```
 
+#### AmazonLoginButton
+```jsx
+<AmazonLoginButton onClick={() => alert('Hello')} />
+```
+
 ## Props
 Props for every Button
 
