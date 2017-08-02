@@ -1,13 +1,19 @@
 import React from 'react';
-import SocialLoginButton from './SocialLoginButton';
+import SocialLoginButtonProvider from './SocialLoginButtonProvider';
+
+const defaults = {
+    text: 'Login with Amazon',
+    icon: 'amazon',
+    style: {background: "#f9ae32"},
+    activeStyle: {background: "#ff9f23"}
+};
 
 /**
  * Amazon login button.
  * For props check {@link SocialLoginButton}
  */
-const AmazonLoginButton = ({text = 'Login with Amazon', style, activeStyle, ...rest}) => {
-    return <SocialLoginButton style={{background: "#f9ae32", ...style}} activeStyle={{background: "#ff9f23", ...activeStyle}}
-                              text={text} icon="amazon" {...rest}/>;
+const AmazonLoginButton = (props) => {
+    return <SocialLoginButtonProvider defaults={defaults} props={props}/>;
 };
 
 export default AmazonLoginButton;

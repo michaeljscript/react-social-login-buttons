@@ -1,14 +1,19 @@
 import React from 'react';
-import SocialLoginButton from './SocialLoginButton';
+import SocialLoginButtonProvider from './SocialLoginButtonProvider';
 
+const defaults = {
+    text: 'Login with Facebook',
+    icon: 'facebook-official',
+    style: {background: "#3b5998"},
+    activeStyle: {background: "#293e69"}
+};
 /**
  * Facebook login button.
  * For props check {@link SocialLoginButton}
+ * @extends {SocialLoginButton}
  */
-const FacebookLoginButton = ({text = 'Login with Facebook', style, activeStyle, ...rest}) => {
-    return <SocialLoginButton style={{background: "#3b5998", ...style}}
-                              activeStyle={{background: "#293e69", ...activeStyle}}
-                              text={text} icon="facebook-official" {...rest}/>;
+const FacebookLoginButton = (props) => {
+    return <SocialLoginButtonProvider defaults={defaults} props={props}/>
 };
 
 export default FacebookLoginButton;
