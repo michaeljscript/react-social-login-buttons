@@ -6,7 +6,7 @@ import SocialLoginButton from './SocialLoginButton';
  * For props check {@link SocialLoginButton}
  */
 const AmazonLoginButton = ({text = 'Login with Amazon', style, activeStyle, ...rest}) => {
-    return <SocialLoginButton style={{background: "#f9ae32", ...style}} activeStyle={{background: "#f9b257", ...activeStyle}}
+    return <SocialLoginButton style={{background: "#f9ae32", ...style}} activeStyle={{background: "#ff9f23", ...activeStyle}}
                               text={text} icon="amazon" {...rest}/>;
 };
 
