@@ -55,10 +55,10 @@ export default class SocialLoginButton extends Component {
         const {style: customStyle, activeStyle, text, icon, iconFormat, iconSize = '26px', size = '50px'} = this.props;
         const {hovered} = this.state;
 
-        const buttonStyles = Object.assign({}, styles.button, {
+        const buttonStyles = {...styles.button, ...{
             lineHeight: size,
             height: size
-        }, customStyle, hovered && activeStyle);
+        }, ...customStyle, ...(hovered && activeStyle)};
 
         return <div style={buttonStyles} onClick={() => this.handleClick()} onMouseEnter={() => this.handleMouseEnter()}
                     onMouseLeave={() => this.handleMouseLeave()}>
