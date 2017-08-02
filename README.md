@@ -87,6 +87,9 @@ This icon will be displayed. We use a special font package to minimize the traff
 ### `iconSize` {String} (optional)
 Icon will have this size. Eg. "26px"
 
+### `size` {String} (optional)
+Box will have this size. Eg. "150px"
+
 ### `iconFormat` {function} (optional)
 Format icon className. Eg. (name) => \`fa-icon fa-icon-${name}\`
 

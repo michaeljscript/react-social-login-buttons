@@ -25,6 +25,9 @@ export default class SocialLoginButton extends Component {
         /** This icon will be displayed */
         icon: PropTypes.string,
 
+        /** Box will have this size */
+        size: PropTypes.string,
+
         /** Icon will have this size. Eg. 26px */
         iconSize: PropTypes.string,
 
@@ -49,14 +52,17 @@ export default class SocialLoginButton extends Component {
     }
 
     render() {
-        const {style: customStyle, activeStyle, text, icon, iconFormat, iconSize = '26px'} = this.props;
+        const {style: customStyle, activeStyle, text, icon, iconFormat, iconSize = '26px', size = '50px'} = this.props;
         const {hovered} = this.state;
 
-        const buttonStyles = Object.assign({}, styles.button, customStyle, hovered && activeStyle);
+        const buttonStyles = Object.assign({}, styles.button, {
+            lineHeight: size,
+            height: size
+        }, customStyle, hovered && activeStyle);
 
         return <div style={buttonStyles} onClick={() => this.handleClick()} onMouseEnter={() => this.handleMouseEnter()}
                     onMouseLeave={() => this.handleMouseLeave()}>
-            {icon && <span style={styles.icon}>
+            {icon && <span style={{...styles.icon, height: size, lineHeight: size}}>
                 <Icon name={icon} size={iconSize} format={iconFormat}/>
             </span>}
             <span style={icon ? {paddingRight: styles.icon.padding} : {padding: styles.icon.padding}}>{text}</span>
@@ -73,11 +79,10 @@ const styles = {
         boxShadow: '#b5b5b5 0 1px 2px',
         borderRadius: 3,
         userSelect: 'none',
-        lineHeight: '50px',
         overflow: 'hidden'
     },
     icon: {
         padding: '0 10px',
-        float: 'left'
+        float: 'left',
     }
 };
