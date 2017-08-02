@@ -29,6 +29,12 @@
       "css": "twitter",
       "code": 61593,
       "src": "fontawesome"
+    },
+    {
+      "uid": "efb5a384af4a5450b7c9acff76a85b8b",
+      "css": "amazon",
+      "code": 62064,
+      "src": "fontawesome"
     }
   ]
 }

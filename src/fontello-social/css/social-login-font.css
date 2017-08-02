@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'social-login-font';
-  src: url('../font/social-login-font.eot?22347267');
-  src: url('../font/social-login-font.eot?22347267#iefix') format('embedded-opentype'),
-       url('../font/social-login-font.woff2?22347267') format('woff2'),
-       url('../font/social-login-font.woff?22347267') format('woff'),
-       url('../font/social-login-font.ttf?22347267') format('truetype'),
-       url('../font/social-login-font.svg?22347267#social-login-font') format('svg');
+  src: url('../font/social-login-font.eot?77963961');
+  src: url('../font/social-login-font.eot?77963961#iefix') format('embedded-opentype'),
+       url('../font/social-login-font.woff2?77963961') format('woff2'),
+       url('../font/social-login-font.woff?77963961') format('woff'),
+       url('../font/social-login-font.ttf?77963961') format('truetype'),
+       url('../font/social-login-font.svg?77963961#social-login-font') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'social-login-font';
-    src: url('../font/social-login-font.svg?22347267#social-login-font') format('svg');
+    src: url('../font/social-login-font.svg?77963961#social-login-font') format('svg');
   }
 }
 */
@@ -59,3 +59,4 @@
 .icon-github-circled:before { content: '\f09b'; } /* '' */
 .icon-gplus:before { content: '\f0d5'; } /* '' */
 .icon-facebook-official:before { content: '\f230'; } /* '' */
+.icon-amazon:before { content: '\f270'; } /* '' */
