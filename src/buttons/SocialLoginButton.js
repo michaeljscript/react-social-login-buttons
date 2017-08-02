@@ -73,7 +73,8 @@ const styles = {
         boxShadow: '#b5b5b5 0 1px 2px',
         borderRadius: 3,
         userSelect: 'none',
-        lineHeight: '50px'
+        lineHeight: '50px',
+        overflow: 'hidden'
     },
     icon: {
         padding: '0 10px',
