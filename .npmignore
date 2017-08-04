@@ -3,3 +3,6 @@ logs
 
 #idea files
 .idea
+
+# images
+*.jpg
