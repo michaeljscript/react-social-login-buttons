@@ -66,6 +66,21 @@ We currently support just a few login buttons. Others will be implemented later.
 <AmazonLoginButton onClick={() => alert('Hello')} />
 ```
 
+#### InstagramLoginButton
+```jsx
+<InstagramLoginButton onClick={() => alert('Hello')} />
+```
+
+#### LinkedInLoginButton
+```jsx
+<LinkedInLoginButton onClick={() => alert('Hello')} />
+```
+
+#### MicrosoftLoginButton
+```jsx
+<MicrosoftLoginButton onClick={() => alert('Hello')} />
+```
+
 ## Props
 Props for every Button
 
