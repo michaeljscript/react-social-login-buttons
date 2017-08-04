@@ -139,6 +139,12 @@ Other social buttons will be implemented later
 
 I welcome issues and pull requests on https://github.com/MichalSzorad/react-social-login-buttons
 
+## Versions
+
+### version 1.2.0
+- Added new buttons for: Instagram, LinkedIn, Microsoft
+- New development api - SocialLoginButtonProvider
+
 ## Thanks
 
 Special thanks for people from

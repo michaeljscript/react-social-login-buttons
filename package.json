@@ -1,6 +1,6 @@
 {
   "name": "react-social-login-buttons",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Simple login buttons for React",
   "main": "./lib/index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "build-watch": "nodemon --exec \"npm run build\" --ignore examples/simple/bundle.js --ignore lib/*",
     "example": "webpack --entry ./examples/simple/index.js --output-path ./examples/simple --output-filename bundle.js",
     "build-styles": "webpack --entry ./src/fontello-social/css/social-login-font.css --output-path ./lib/fontello-social/css/ --output-filename social-login-font.css.js",
-    "example-watch":"nodemon --exec \"npm run example\" --ignore examples/simple/bundle.js --ignore lib/*",
+    "example-watch": "nodemon --exec \"npm run example\" --ignore examples/simple/bundle.js --ignore lib/*",
     "prepublish": "npm run build"
   },
   "browserify-css": {
@@ -27,6 +27,8 @@
     "social",
     "login",
     "buttons",
+    "facebook",
+    "google",
     "react-social-login-buttons"
   ],
   "author": "Michal Szorad, miso.szorad@gmail.com",
