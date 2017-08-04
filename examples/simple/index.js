@@ -6,7 +6,10 @@ import {
     GoogleLoginButton,
     GithubLoginButton,
     TwitterLoginButton,
-    AmazonLoginButton
+    AmazonLoginButton,
+    InstagramLoginButton,
+    LinkedInLoginButton,
+    MicrosoftLoginButton
 } from '../../src';
 
 /*
@@ -26,4 +29,7 @@ render(<div style={{width: 300, margin: '75px auto'}}>
     <GithubLoginButton/>
     <TwitterLoginButton/>
     <AmazonLoginButton/>
+    <InstagramLoginButton/>
+    <LinkedInLoginButton/>
+    <MicrosoftLoginButton/>
 </div>, document.getElementById('app'));
