@@ -23405,7 +23405,7 @@ var _SocialLoginButtonProvider2 = _interopRequireDefault(_SocialLoginButtonProvi
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var defaults = {
-    text: 'Login with Github',
+    text: 'Login with GitHub',
     icon: 'github-circled',
     style: { background: "#333333" },
     activeStyle: { background: '#555555' }
