@@ -141,7 +141,7 @@ I welcome issues and pull requests on https://github.com/MichalSzorad/react-soci
 
 ## Versions
 
-### version 1.2.0
+##### version 1.2.0
 - Added new buttons for: Instagram, LinkedIn, Microsoft
 - New development api - SocialLoginButtonProvider
 
