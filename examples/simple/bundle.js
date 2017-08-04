@@ -10322,16 +10322,28 @@ var _src = __webpack_require__(186);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/*
-
-// visual tests
-<FacebookLoginButton onClick={e => alert('Hello from facebook button')} iconSize="150px" size="150px"/>
-<GoogleLoginButton size="150px"/>
-<GithubLoginButton icon="github" iconFormat={name => `demo-icon icon-${name}-circled`}/>
-<TwitterLoginButton style={{color: 'red'}} activeStyle={{color: 'blue'}}/>
-<AmazonLoginButton icon="gplus"/>
-
- */
+// // custom button test
+// import SocialLoginButtonProvider from '../../src/buttons/SocialLoginButtonProvider';
+//
+// const defaults = {
+//     text: 'Login with Facebook',
+//     icon: 'facebook-official',
+//     iconFormat: name => `demo-icon icon-${name}`,
+//     style: {background: "#3b5998"},
+//     activeStyle: {background: "#293e69"}
+// };
+// /** My Facebook login button. */
+// const MyFacebookLoginButton = (props) => {
+//     return <SocialLoginButtonProvider defaults={defaults} props={props}/>
+// };
+//
+// // visual tests
+// <FacebookLoginButton onClick={e => alert('Hello from facebook button')} iconSize="150px" size="150px"/>
+// <GoogleLoginButton size="150px"/>
+// <GithubLoginButton icon="github" iconFormat={name => `demo-icon icon-${name}-circled`}/>
+// <TwitterLoginButton style={{color: 'red'}} activeStyle={{color: 'blue'}}/>
+// <AmazonLoginButton icon="gplus"/>
+//
 
 (0, _reactDom.render)(_react2.default.createElement(
     'div',
