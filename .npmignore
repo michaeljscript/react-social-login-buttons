@@ -6,3 +6,6 @@ logs
 
 # images
 *.jpg
+
+# babel files
+.babelrc
