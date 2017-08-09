@@ -149,6 +149,11 @@ This text will be displayed
 ### `style` {Object} (optional)
 Custom button styles
 
+### `children` {React.children} (optional)
+If you are using children,
+do not forget to use style `verticalAlign: middle` to make them nice
+in the middle of the button
+
 ### `activeStyle` {Object} (optional)
 activeStyle styles will be applied instead of style when mouse hovers above the element
 
