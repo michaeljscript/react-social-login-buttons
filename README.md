@@ -28,12 +28,12 @@ import FacebookLoginButton from 'react-social-login-buttons/lib/buttons/Facebook
 
 Every social login button extends SocialLoginButton.
 
-```jsx
+```js
 <FacebookLoginButton text="Login with Facebook" onClick={() => alert('Hello')} />
 ```
 
 By default there will be a text "Login with Facebook"
-```jsx
+```js
 <FacebookLoginButton onClick={() => alert('Hello')} />
 ```
 
@@ -42,42 +42,42 @@ By default there will be a text "Login with Facebook"
 We currently support just a few login buttons. Others will be implemented later.
 
 #### FacebookLoginButton
-```jsx
+```js
 <FacebookLoginButton onClick={() => alert('Hello')} />
 ```
 
 #### GoogleLoginButton
-```jsx
+```js
 <GoogleLoginButton onClick={() => alert('Hello')} />
 ```
 
 #### GithubLoginButton
-```jsx
+```js
 <GithubLoginButton onClick={() => alert('Hello')} />
 ```
 
 #### TwitterLoginButton
-```jsx
+```js
 <TwitterLoginButton onClick={() => alert('Hello')} />
 ```
 
 #### AmazonLoginButton
-```jsx
+```js
 <AmazonLoginButton onClick={() => alert('Hello')} />
 ```
 
 #### InstagramLoginButton
-```jsx
+```js
 <InstagramLoginButton onClick={() => alert('Hello')} />
 ```
 
 #### LinkedInLoginButton
-```jsx
+```js
 <LinkedInLoginButton onClick={() => alert('Hello')} />
 ```
 
 #### MicrosoftLoginButton
-```jsx
+```js
 <MicrosoftLoginButton onClick={() => alert('Hello')} />
 ```
 
@@ -85,7 +85,7 @@ We currently support just a few login buttons. Others will be implemented later.
 You can create your own button.
 You do not have to wait for us to implement all of them.
 
-```jsx
+```js
 import React from 'react';
 import SocialLoginButtonProvider from 'react-social-login-buttons/lib/buttons/SocialLoginButtonProvider';
 
@@ -111,7 +111,7 @@ and `paddingRight: 10` on your image/icon
 If you want to use bigger image and
 bigger button you can use property `size`.
 
-```jsx
+```js
 import React from 'react';
 import SocialLoginButton from 'react-social-login-buttons/lib/buttons/SocialLoginButton';
 
