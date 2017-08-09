@@ -176,6 +176,9 @@ I welcome issues and pull requests on https://github.com/MichalSzorad/react-soci
 
 ## Versions
 
+##### version 1.3.1
+- Fixed README.md syntax highlighting
+
 ##### version 1.3.0
 - Allowed to pass children into `SocialLoginButton`
 
