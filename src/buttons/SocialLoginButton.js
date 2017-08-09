@@ -37,6 +37,13 @@ export default class SocialLoginButton extends Component {
 
     state = {hovered: false};
 
+    constructor(...args) {
+        super(...args);
+        this.handleMouseEnter = this.handleMouseEnter.bind(this);
+        this.handleMouseLeave = this.handleMouseLeave.bind(this);
+        this.handleClick = this.handleClick.bind(this);
+    }
+
     handleMouseEnter() {
         this.setState({hovered: true});
     }
@@ -52,25 +59,42 @@ export default class SocialLoginButton extends Component {
     }
 
     render() {
-        const {style: customStyle, activeStyle, text, icon, iconFormat, iconSize = '26px', size = '50px'} = this.props;
+        const {style: customStyle, activeStyle, children, text = children, icon, iconFormat, iconSize = '26px', size = '50px'} = this.props;
         const {hovered} = this.state;
 
-        const buttonStyles = {...styles.button, ...{
-            lineHeight: size,
-            height: size
-        }, ...customStyle, ...(hovered && activeStyle)};
+        const buttonStyles = {
+            ...styles.button, ...{
+                lineHeight: typeof text === 'string' ? size : 'auto',
+                height: size
+            }, ...customStyle, ...(hovered && activeStyle)
+        };
 
-        return <div style={buttonStyles} onClick={() => this.handleClick()} onMouseEnter={() => this.handleMouseEnter()}
-                    onMouseLeave={() => this.handleMouseLeave()}>
-            {icon && <span style={{...styles.icon, height: size, lineHeight: size}}>
-                <Icon name={icon} size={iconSize} format={iconFormat}/>
-            </span>}
-            <span style={icon ? {paddingRight: styles.icon.padding} : {padding: styles.icon.padding}}>{text}</span>
+        const childrenCount = React.Children.count(children);
+
+        // classic usage of this button
+        if (childrenCount === 0) {
+            return <div style={buttonStyles} onClick={this.handleClick} onMouseEnter={this.handleMouseEnter}
+                        onMouseLeave={this.handleMouseLeave}>
+                {icon && <span style={{...styles.icon, height: size, lineHeight: size}}>
+                    <Icon name={icon} size={iconSize} format={iconFormat}/>
+                </span>}
+                <span>{text}</span>
+            </div>
+        }
+
+        // children provided, rendering children as text
+        return <div style={buttonStyles} onClick={this.handleClick} onMouseEnter={this.handleMouseEnter}
+                    onMouseLeave={this.handleMouseLeave}>
+            <span style={styles.spanFix}/>
+            {text}
         </div>
     }
 }
 
 const styles = {
+    spanFix: {
+        height: '100%', display: 'inline-block', verticalAlign: 'middle',
+    },
     button: {
         fontSize: '120%',
         color: '#ffffff',
@@ -79,10 +103,11 @@ const styles = {
         boxShadow: '#b5b5b5 0 1px 2px',
         borderRadius: 3,
         userSelect: 'none',
-        overflow: 'hidden'
+        overflow: 'hidden',
+        padding: '0 10px'
     },
     icon: {
-        padding: '0 10px',
+        paddingRight: '10px',
         float: 'left',
     }
 };

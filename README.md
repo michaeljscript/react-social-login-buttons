@@ -82,7 +82,9 @@ We currently support just a few login buttons. Others will be implemented later.
 ```
 
 ## Create your own button
-You can create your own button. You do not have to wait for us to implement all of them.
+You can create your own button.
+You do not have to wait for us to implement all of them.
+
 ```jsx
 import React from 'react';
 import SocialLoginButtonProvider from 'react-social-login-buttons/lib/buttons/SocialLoginButtonProvider';
@@ -100,6 +102,39 @@ const MyFacebookLoginButton = (props) => {
 };
 
 export default MyFacebookLoginButton;
+```
+
+If you want to create a more complicated button
+you can use `SocialLoginButton` directly.
+Do not forget to use style `verticalAlign: middle` on every child
+and `paddingRight: 10` on your image/icon
+If you want to use bigger image and
+bigger button you can use property `size`.
+
+```jsx
+import React from 'react';
+import SocialLoginButton from 'react-social-login-buttons/lib/buttons/SocialLoginButton';
+
+/** My Google login button. */
+const MyGoogleLoginButton = (props) => {
+    const customProps = {
+        style: {
+            background: 'white',
+            color: '#808080'
+        },
+        activeStyle: {
+            background: '#eeeeee',
+        }
+    };
+
+    return <SocialLoginButton {...{...customProps, ...props}}>
+        <img style={{verticalAlign: 'middle', height: 26, paddingRight: 10}}
+             src="https://cdn4.iconfinder.com/data/icons/new-google-logo-2015/400/new-google-favicon-128.png"/>
+        <span style={{verticalAlign: 'middle'}}>Sign in with Google</span>
+    </SocialLoginButton>
+};
+
+export default MyGoogleLoginButton;
 ```
 
 ## Props
@@ -140,6 +175,9 @@ Other social buttons will be implemented later
 I welcome issues and pull requests on https://github.com/MichalSzorad/react-social-login-buttons
 
 ## Versions
+
+##### version 1.3.0
+- Allowed to pass children into `SocialLoginButton`
 
 ##### version 1.2.1
 - Fixed a bug when react-social-login-buttons don't compile

@@ -12,9 +12,9 @@ import {
     MicrosoftLoginButton
 } from '../../src';
 
-
+import SocialLoginButton from '../../src/buttons/SocialLoginButton';
 // // custom button test
-// import SocialLoginButtonProvider from '../../src/buttons/SocialLoginButtonProvider';
+//
 //
 // const defaults = {
 //     text: 'Login with Facebook',
@@ -29,12 +29,93 @@ import {
 // };
 //
 // // visual tests
-// <FacebookLoginButton onClick={e => alert('Hello from facebook button')} iconSize="150px" size="150px"/>
-// <GoogleLoginButton size="150px"/>
-// <GithubLoginButton icon="github" iconFormat={name => `demo-icon icon-${name}-circled`}/>
-// <TwitterLoginButton style={{color: 'red'}} activeStyle={{color: 'blue'}}/>
-// <AmazonLoginButton icon="gplus"/>
-//
+{/*<FacebookLoginButton onClick={e => alert('Hello from facebook button')} iconSize="150px" size="150px"/>*/
+}
+{/*<GoogleLoginButton size="150px"/>*/
+}
+{/*<GithubLoginButton icon="github" iconFormat={name => `demo-icon icon-${name}-circled`}/>*/
+}
+{/*<TwitterLoginButton style={{color: 'red'}} activeStyle={{color: 'blue'}}/>*/
+}
+{/*<AmazonLoginButton icon="gplus"/>*/
+}
+{/*<CustomGoogleButton/>*/
+}
+{/*<SocialLoginButton {...defaults}>*/
+}
+{/*<img src="https://cdn4.iconfinder.com/data/icons/new-google-logo-2015/400/new-google-favicon-128.png"/>*/
+}
+{/*<span>Sign in with Google</span>*/
+}
+{/*</SocialLoginButton>*/
+}
+{/*<SocialLoginButton {...defaults} style={{background: '#444'}}>*/
+}
+{/*<img style={{verticalAlign: 'middle'}}*/
+}
+{/*src="https://cdn4.iconfinder.com/data/icons/new-google-logo-2015/400/new-google-favicon-128.png"*/
+}
+{/*height={26}/>*/
+}
+{/*<span style={{verticalAlign: 'middle'}}>Sign in with Google</span>*/
+}
+{/*</SocialLoginButton>*/
+}
+{/*<SocialLoginButton {...defaults}>*/
+}
+{/*<span>Sign in with Google</span>*/
+}
+{/*</SocialLoginButton>*/
+}
+{/*<SocialLoginButton {...defaults}>*/
+}
+{/*<img src="https://cdn4.iconfinder.com/data/icons/new-google-logo-2015/400/new-google-favicon-128.png"/>*/
+}
+{/*<span>Sign in with Google</span>*/
+}
+{/*<span>Sign in with Google</span>*/
+}
+{/*</SocialLoginButton>*/
+}
+{/*<SocialLoginButton {...defaults} icon="amazon" style={{background: 'red'}}>*/
+}
+{/*</SocialLoginButton>*/
+}
+{/*<SocialLoginButton {...defaults} text="hello">*/
+}
+{/*</SocialLoginButton>*/
+}
+
+const defaults = {
+    style: {background: "white", color: 'gray'},
+    activeStyle: {background: "lightblue", color: 'white'}
+};
+
+const CustomGoogleButton = (props) => {
+    return <SocialLoginButton {...defaults}>
+        <img src="https://cdn4.iconfinder.com/data/icons/new-google-logo-2015/400/new-google-favicon-128.png"
+             height={26}/>
+        <span>Sign in with Google</span>
+    </SocialLoginButton>
+};
+
+const MyGoogleLoginButton = (props) => {
+    const customProps = {
+        style: {
+            background: 'white',
+            color: '#808080'
+        },
+        activeStyle: {
+            background: '#eeeeee',
+        }
+    };
+
+    return <SocialLoginButton {...{...customProps, ...props}}>
+        <img style={{verticalAlign: 'middle', height: 26, paddingRight: 10}}
+             src="https://cdn4.iconfinder.com/data/icons/new-google-logo-2015/400/new-google-favicon-128.png"/>
+        <span style={{verticalAlign: 'middle'}}>Sign in with Google</span>
+    </SocialLoginButton>
+};
 
 render(<div style={{width: 300, margin: '75px auto'}}>
     <FacebookLoginButton onClick={e => alert('Hello from facebook button')}/>
@@ -45,4 +126,5 @@ render(<div style={{width: 300, margin: '75px auto'}}>
     <InstagramLoginButton/>
     <LinkedInLoginButton/>
     <MicrosoftLoginButton/>
+    <MyGoogleLoginButton/>
 </div>, document.getElementById('app'));
