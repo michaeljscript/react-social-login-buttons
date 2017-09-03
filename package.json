@@ -1,14 +1,13 @@
 {
   "name": "react-social-login-buttons",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "Simple login buttons for React",
   "main": "./lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "babel": "babel src/ --out-dir lib/",
-    "build": "npm run babel && npm run build-styles && npm run example",
+    "build": "npm run babel && npm run build-styles",
     "build-watch": "nodemon --exec \"npm run build\" --ignore examples/simple/bundle.js --ignore lib/*",
-    "example": "webpack --entry ./examples/simple/index.js --output-path ./examples/simple --output-filename bundle.js",
     "build-styles": "webpack --entry ./src/fontello-social/css/social-login-font.css --output-path ./lib/fontello-social/css/ --output-filename social-login-font.css.js",
     "example-watch": "nodemon --exec \"npm run example\" --ignore examples/simple/bundle.js --ignore lib/*",
     "prepublish": "npm run build"
@@ -40,9 +39,10 @@
   },
   "homepage": "https://github.com/MichalSzorad/react-social-login-buttons#readme",
   "dependencies": {
-    "prop-types": "^15.5.10",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "prop-types": "^15.5.10"
+  },
+  "peerDependencies": {
+    "react:": "15.x"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
