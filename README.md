@@ -181,8 +181,11 @@ I welcome issues and pull requests on https://github.com/MichalSzorad/react-soci
 
 ## Versions
 
+##### version 1.3.4
+- Fix package.json error
+
 ##### version 1.3.3
-Removed react from dependency
+- Removed react from dependency
 
 ##### version 1.3.1
 - Fixed README.md syntax highlighting
