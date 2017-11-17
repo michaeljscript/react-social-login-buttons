@@ -181,6 +181,9 @@ I welcome issues and pull requests on https://github.com/MichalSzorad/react-soci
 
 ## Versions
 
+##### version 1.3.5
+- Change react version
+
 ##### version 1.3.4
 - Fix package.json error
 
