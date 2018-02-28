@@ -32,7 +32,10 @@ export default class SocialLoginButton extends Component {
         iconSize: PropTypes.string,
 
         /** Format icon className. Eg. (name) => `fa-icon fa-icon-${name}` */
-        iconFormat: PropTypes.func
+        iconFormat: PropTypes.func,
+
+        /** Text alignment of the button. Default 'left' */
+        textAlign: PropTypes.oneOf(['left', 'right', 'center']);
     };
 
     state = {hovered: false};
@@ -59,13 +62,14 @@ export default class SocialLoginButton extends Component {
     }
 
     render() {
-        const {style: customStyle, activeStyle, children, text = children, icon, iconFormat, iconSize = '26px', size = '50px'} = this.props;
+        const {style: customStyle, activeStyle, children, text = children, icon, iconFormat, iconSize = '26px', size = '50px', textAlign = 'left'} = this.props;
         const {hovered} = this.state;
 
         const buttonStyles = {
             ...styles.button, ...{
                 lineHeight: typeof text === 'string' ? size : 'auto',
-                height: size
+                height: size,
+                textAlign: textAlign
             }, ...customStyle, ...(hovered && activeStyle)
         };
 
