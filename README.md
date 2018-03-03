@@ -169,6 +169,9 @@ Box will have this size. Eg. "150px"
 ### `iconFormat` {function} (optional)
 Format icon className. Eg. (name) => \`fa-icon fa-icon-${name}\`
 
+### `textAlign` {"left" | "right" | "center"} (optional)
+Align the text on the button (default is left).
+
 
 ## Why react-social-login-buttons ?
 
