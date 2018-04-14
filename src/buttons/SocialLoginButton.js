@@ -92,7 +92,7 @@ const computeButtonStyles = (defaults, { text, size, textAlign, customStyle, hov
 
 SocialLoginButton.propTypes = {
     activeStyle: T.object,
-    children: T.node.isRequired,
+    children: T.node,
     icon: T.string,
     iconFormat: T.func,
     iconSize: T.string,
