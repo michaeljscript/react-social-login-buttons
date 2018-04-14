@@ -9,8 +9,7 @@
         "babel": "babel src/ --out-dir lib/",
         "build": "npm run babel && npm run build-styles",
         "build-watch": "nodemon --exec \"npm run build\" --ignore lib/*",
-        "build-styles":
-            "webpack --entry ./src/fontello-social/css/social-login-font.css --output-path ./lib/fontello-social/css/ --output-filename social-login-font.css.js",
+        "build-styles": "webpack --entry ./src/fontello-social/css/social-login-font.css --output-path ./lib/fontello-social/css/ --output-filename social-login-font.css.js",
         "example-watch": "nodemon --exec \"npm run example\" --ignore lib/*",
         "format": "eslint src --fix",
         "storybook": "start-storybook -p 9001 -c .storybook"
@@ -24,7 +23,15 @@
         "type": "git",
         "url": "git+https://github.com/MichalSzorad/react-social-login-buttons.git"
     },
-    "keywords": ["react", "social", "login", "buttons", "facebook", "google", "react-social-login-buttons"],
+    "keywords": [
+        "react",
+        "social",
+        "login",
+        "buttons",
+        "facebook",
+        "google",
+        "react-social-login-buttons"
+    ],
     "author": "Michal Szorad, miso.szorad@gmail.com",
     "best-phrase": "undefined is not defined",
     "about": "This is my first library, please be nice to me",
@@ -62,7 +69,7 @@
         "css-loader": "^0.28.4",
         "eslint": "^4.19.1",
         "eslint-config-react": "^1.1.7",
-        "eslint-plugin-class-property": "^1.1.0",
+        "eslint-plugin-babel": "^5.0.0",
         "eslint-plugin-react": "^7.7.0",
         "jest": "^22.4.3",
         "nodemon": "^1.11.0",

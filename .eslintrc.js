@@ -1,7 +1,7 @@
 module.exports = {
     env: { browser: true },
     extends: ["react"],
-    plugins: ["class-property"],
+    plugins: ["babel"],
     rules: {
         "no-use-before-define": "off",
         "indent": ["warn", 2],
@@ -25,7 +25,7 @@ module.exports = {
                 memberSyntaxSortOrder: ["none", "all", "single", "multiple"],
             },
         ],
-        "class-property/class-property-semicolon": ["warn", "always"],
+        "babel/semi": 1,
         "object-shorthand": ["warn", "always"],
     },
 };
