@@ -7,9 +7,9 @@
     "test": "jest",
     "babel": "babel src/ --out-dir lib/",
     "build": "npm run babel && npm run build-styles",
-    "build-watch": "nodemon --exec \"npm run build\" --ignore examples/simple/bundle.js --ignore lib/*",
+    "build-watch": "nodemon --exec \"npm run build\" --ignore lib/*",
     "build-styles": "webpack --entry ./src/fontello-social/css/social-login-font.css --output-path ./lib/fontello-social/css/ --output-filename social-login-font.css.js",
-    "example-watch": "nodemon --exec \"npm run example\" --ignore examples/simple/bundle.js --ignore lib/*",
+    "example-watch": "nodemon --exec \"npm run example\" --ignore lib/*",
     "prepublish": "npm run build",
     "prepare": "npm run build"
   },
