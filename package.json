@@ -9,7 +9,8 @@
     "build": "npm run babel && npm run build-styles",
     "build-watch": "nodemon --exec \"npm run build\" --ignore lib/*",
     "build-styles": "webpack --entry ./src/fontello-social/css/social-login-font.css --output-path ./lib/fontello-social/css/ --output-filename social-login-font.css.js",
-    "example-watch": "nodemon --exec \"npm run example\" --ignore lib/*"
+    "example-watch": "nodemon --exec \"npm run example\" --ignore lib/*",
+    "lint:test": "eslint src"
   },
   "browserify-css": {
     "autoInject": true,
