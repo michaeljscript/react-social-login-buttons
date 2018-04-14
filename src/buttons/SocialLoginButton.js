@@ -17,6 +17,12 @@ export default class SocialLoginButton extends Component {
         textAlign: T.oneOf(["left", "right", "center"]),
     };
 
+    static defaultProps = {
+        iconSize: "26px",
+        size: "50px",
+        textAlign: "left",
+    };
+
     state = { hovered: false };
 
     handleMouseEnter = () => {
@@ -41,9 +47,9 @@ export default class SocialLoginButton extends Component {
             text = children,
             icon,
             iconFormat,
-            iconSize = "26px",
-            size = "50px",
-            textAlign = "left",
+            iconSize,
+            size,
+            textAlign,
         } = this.props;
         const { hovered } = this.state;
 
