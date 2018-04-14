@@ -13,5 +13,6 @@ module.exports = {
                 functions: "always-multiline",
             },
         ],
+        "quotes": ["warn", "double"],
     },
 };
