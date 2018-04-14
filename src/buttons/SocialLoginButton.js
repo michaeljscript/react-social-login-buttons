@@ -24,13 +24,13 @@ export default class SocialLoginButton extends Component {
     const {
       style: customStyle,
       activeStyle,
+      align,
       text,
       children = text,
       icon,
       iconFormat,
       iconSize,
       size,
-      textAlign,
     } = this.props;
     const { hovered } = this.state;
 
@@ -39,7 +39,7 @@ export default class SocialLoginButton extends Component {
       customStyle,
       hovered,
       size,
-      textAlign,
+      align,
     });
 
     // classic usage of this button
@@ -63,11 +63,11 @@ export default class SocialLoginButton extends Component {
   }
 }
 
-const computeButtonStyles = (defaults, { size, textAlign, customStyle, hovered, activeStyle }) => ({
+const computeButtonStyles = (defaults, { size, align, customStyle, hovered, activeStyle }) => ({
   ...defaults,
   ...{
     height: size,
-    textAlign,
+    textAlign: align,
   },
   ...customStyle,
   ...(hovered && activeStyle),
@@ -75,6 +75,7 @@ const computeButtonStyles = (defaults, { size, textAlign, customStyle, hovered, 
 
 SocialLoginButton.propTypes = {
   activeStyle: T.object,
+  align: T.oneOf(["left", "right", "center"]),
   children: T.node,
   icon: T.string,
   iconFormat: T.func,
@@ -83,13 +84,12 @@ SocialLoginButton.propTypes = {
   size: T.string,
   style: T.object,
   text: T.string,
-  textAlign: T.oneOf(["left", "right", "center"]),
 };
 
 SocialLoginButton.defaultProps = {
+  align: "left",
   iconSize: "26px",
   size: "50px",
-  textAlign: "left",
 };
 
 const styles = {
