@@ -2,10 +2,8 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 
 import "../fontello-social/css/social-login-font.css";
+import Icon from "./icon";
 
-const Icon = ({ name, size = 26, format = name => `demo-icon icon-${name}` }) => (
-    <i className={format(name)} style={{ fontSize: size }} />
-);
 
 export default class SocialLoginButton extends Component {
     static propTypes = {
