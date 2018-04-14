@@ -1,6 +1,7 @@
 module.exports = {
     env: { browser: true },
     extends: ["react"],
+    plugins: ["class-property"],
     rules: {
         "no-use-before-define": "off",
         "comma-dangle": [
@@ -23,5 +24,6 @@ module.exports = {
                 memberSyntaxSortOrder: ["none", "all", "single", "multiple"],
             },
         ],
+        "class-property/class-property-semicolon": ["warn", "always"],
     },
 };

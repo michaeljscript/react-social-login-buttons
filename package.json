@@ -67,6 +67,7 @@
     "css-loader": "^0.28.4",
     "eslint": "^4.19.1",
     "eslint-config-react": "^1.1.7",
+    "eslint-plugin-class-property": "^1.1.0",
     "eslint-plugin-react": "^7.7.0",
     "jest": "^22.4.3",
     "nodemon": "^1.11.0",
