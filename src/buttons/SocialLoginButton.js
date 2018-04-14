@@ -6,6 +6,7 @@ import React, { Component } from "react";
 export default class SocialLoginButton extends Component {
     static propTypes = {
         activeStyle: PropTypes.object,
+        children: PropTypes.node.isRequired,
         icon: PropTypes.string,
         iconFormat: PropTypes.func,
         iconSize: PropTypes.string,
