@@ -24,8 +24,8 @@ export default class SocialLoginButton extends Component {
     const {
       style: customStyle,
       activeStyle,
-      children,
-      text = children,
+      text,
+      children = text,
       icon,
       iconFormat,
       iconSize,
@@ -39,32 +39,10 @@ export default class SocialLoginButton extends Component {
       customStyle,
       hovered,
       size,
-      text,
       textAlign,
     });
 
-    const childrenCount = React.Children.count(children);
-
     // classic usage of this button
-    if (childrenCount === 0) {
-      return (
-        <div
-          style={buttonStyles}
-          onClick={this.handleClick}
-          onMouseEnter={this.handleMouseEnter}
-          onMouseLeave={this.handleMouseLeave}
-        >
-          {icon && (
-            <span style={{ ...styles.icon, height: size, lineHeight: size }}>
-              <Icon name={icon} size={iconSize} format={iconFormat} />
-            </span>
-          )}
-          <span>{text}</span>
-        </div>
-      );
-    }
-
-    // children provided, rendering children as text
     return (
       <div
         style={buttonStyles}
@@ -72,18 +50,23 @@ export default class SocialLoginButton extends Component {
         onMouseEnter={this.handleMouseEnter}
         onMouseLeave={this.handleMouseLeave}
       >
-        <span style={styles.spanFix} />
-        {text}
+        <div style={styles.flex}>
+          {icon && (
+            <div style={{ ...styles.icon }}>
+              <Icon name={icon} size={iconSize} format={iconFormat} />
+            </div>
+          )}
+          <div>{children}</div>
+        </div>
       </div>
     );
   }
 }
 
-const computeButtonStyles = (defaults, { text, size, textAlign, customStyle, hovered, activeStyle }) => ({
+const computeButtonStyles = (defaults, { size, textAlign, customStyle, hovered, activeStyle }) => ({
   ...defaults,
   ...{
     height: size,
-    lineHeight: typeof text === "string" ? size : "auto",
     textAlign,
   },
   ...customStyle,
@@ -121,8 +104,12 @@ const styles = {
     padding: "0 10px",
     userSelect: "none",
   },
+  flex: {
+    alignItems: "center",
+    display: "inline-flex",
+    height: "100%",
+  },
   icon: {
-    float: "left",
     paddingRight: "10px",
   },
   spanFix: {
