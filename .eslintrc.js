@@ -25,5 +25,6 @@ module.exports = {
             },
         ],
         "class-property/class-property-semicolon": ["warn", "always"],
+        "object-shorthand": ["warn", "always"],
     },
 };
