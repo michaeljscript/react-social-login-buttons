@@ -4,8 +4,8 @@ import SocialLoginButtonProvider from './SocialLoginButtonProvider';
 const defaults = {
     text: 'Login with GitHub',
     icon: 'github-circled',
-    style: {background: "#333333"},
-    activeStyle: {background: '#555555'}
+    style: { background: "#333333" },
+    activeStyle: { background: '#555555' },
 };
 /**
  * Github login button.

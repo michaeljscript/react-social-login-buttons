@@ -4,8 +4,8 @@ import SocialLoginButtonProvider from './SocialLoginButtonProvider';
 const defaults = {
     text: 'Login with Twitter',
     icon: 'twitter',
-    style: {background: "#5aa4eb"},
-    activeStyle: {background: "#3b82da"}
+    style: { background: "#5aa4eb" },
+    activeStyle: { background: "#3b82da" },
 };
 
 /**

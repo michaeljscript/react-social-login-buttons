@@ -1,15 +1,14 @@
-import PropTypes from 'prop-types';
-import React, {Component} from 'react';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
 
-import '../fontello-social/css/social-login-font.css';
+import "../fontello-social/css/social-login-font.css";
 
-const Icon = ({name, size = 26, format = (name) => `demo-icon icon-${name}`}) => <i className={format(name)}
-                                                                                    style={{fontSize: size}}/>;
+const Icon = ({ name, size = 26, format = name => `demo-icon icon-${name}` }) => (
+    <i className={format(name)} style={{ fontSize: size }} />
+);
 
 export default class SocialLoginButton extends Component {
-
     static propTypes = {
-
         /** Will be triggered when clicked on the button. */
         onClick: PropTypes.func,
 
@@ -35,83 +34,112 @@ export default class SocialLoginButton extends Component {
         iconFormat: PropTypes.func,
 
         /** Text alignment of the button. Default 'left' */
-        textAlign: PropTypes.oneOf(['left', 'right', 'center'])
+        textAlign: PropTypes.oneOf(["left", "right", "center"]),
     };
 
-    state = {hovered: false};
-
-    constructor(...args) {
+    constructor (...args) {
         super(...args);
         this.handleMouseEnter = this.handleMouseEnter.bind(this);
         this.handleMouseLeave = this.handleMouseLeave.bind(this);
         this.handleClick = this.handleClick.bind(this);
     }
 
-    handleMouseEnter() {
-        this.setState({hovered: true});
+    state = { hovered: false };
+
+    handleMouseEnter () {
+        this.setState({ hovered: true });
     }
 
-    handleMouseLeave() {
-        this.setState({hovered: false});
+    handleMouseLeave () {
+        this.setState({ hovered: false });
     }
 
-    handleClick() {
-        if (typeof this.props.onClick === 'function') {
+    handleClick () {
+        if (typeof this.props.onClick === "function") {
             this.props.onClick();
         }
     }
 
-    render() {
-        const {style: customStyle, activeStyle, children, text = children, icon, iconFormat, iconSize = '26px', size = '50px', textAlign = 'left'} = this.props;
-        const {hovered} = this.state;
+    render () {
+        const {
+            style: customStyle,
+            activeStyle,
+            children,
+            text = children,
+            icon,
+            iconFormat,
+            iconSize = "26px",
+            size = "50px",
+            textAlign = "left",
+        } = this.props;
+        const { hovered } = this.state;
 
         const buttonStyles = {
-            ...styles.button, ...{
-                lineHeight: typeof text === 'string' ? size : 'auto',
+            ...styles.button,
+            ...{
+                lineHeight: typeof text === "string" ? size : "auto",
                 height: size,
-                textAlign: textAlign
-            }, ...customStyle, ...(hovered && activeStyle)
+                textAlign: textAlign,
+            },
+            ...customStyle,
+            ...(hovered && activeStyle),
         };
 
         const childrenCount = React.Children.count(children);
 
         // classic usage of this button
         if (childrenCount === 0) {
-            return <div style={buttonStyles} onClick={this.handleClick} onMouseEnter={this.handleMouseEnter}
-                        onMouseLeave={this.handleMouseLeave}>
-                {icon && <span style={{...styles.icon, height: size, lineHeight: size}}>
-                    <Icon name={icon} size={iconSize} format={iconFormat}/>
-                </span>}
-                <span>{text}</span>
-            </div>
+            return (
+                <div
+                    style={buttonStyles}
+                    onClick={this.handleClick}
+                    onMouseEnter={this.handleMouseEnter}
+                    onMouseLeave={this.handleMouseLeave}
+                >
+                    {icon && (
+                        <span style={{ ...styles.icon, height: size, lineHeight: size }}>
+                            <Icon name={icon} size={iconSize} format={iconFormat} />
+                        </span>
+                    )}
+                    <span>{text}</span>
+                </div>
+            );
         }
 
         // children provided, rendering children as text
-        return <div style={buttonStyles} onClick={this.handleClick} onMouseEnter={this.handleMouseEnter}
-                    onMouseLeave={this.handleMouseLeave}>
-            <span style={styles.spanFix}/>
-            {text}
-        </div>
+        return (
+            <div
+                style={buttonStyles}
+                onClick={this.handleClick}
+                onMouseEnter={this.handleMouseEnter}
+                onMouseLeave={this.handleMouseLeave}
+            >
+                <span style={styles.spanFix} />
+                {text}
+            </div>
+        );
     }
 }
 
 const styles = {
     spanFix: {
-        height: '100%', display: 'inline-block', verticalAlign: 'middle',
+        height: "100%",
+        display: "inline-block",
+        verticalAlign: "middle",
     },
     button: {
-        fontSize: '120%',
-        color: '#ffffff',
+        fontSize: "120%",
+        color: "#ffffff",
         margin: 5,
-        cursor: 'pointer',
-        boxShadow: '#b5b5b5 0 1px 2px',
+        cursor: "pointer",
+        boxShadow: "#b5b5b5 0 1px 2px",
         borderRadius: 3,
-        userSelect: 'none',
-        overflow: 'hidden',
-        padding: '0 10px'
+        userSelect: "none",
+        overflow: "hidden",
+        padding: "0 10px",
     },
     icon: {
-        paddingRight: '10px',
-        float: 'left',
-    }
+        paddingRight: "10px",
+        float: "left",
+    },
 };
