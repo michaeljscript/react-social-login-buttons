@@ -1,5 +1,5 @@
-import React from 'react';
-import SocialLoginButton from './SocialLoginButton';
+import React from "react";
+import SocialLoginButton from "./SocialLoginButton";
 
 const SocialLoginButtonProvider = ({ defaults, props }) => {
     const finalProps = {
@@ -8,8 +8,8 @@ const SocialLoginButtonProvider = ({ defaults, props }) => {
         style: { ...defaults.style, ...props.style },
         activeStyle: { ...defaults.activeStyle, ...props.activeStyle },
     };
-    
-    return <SocialLoginButton {...finalProps}/>;
+
+    return <SocialLoginButton {...finalProps} />;
 };
 
 export default SocialLoginButtonProvider;
