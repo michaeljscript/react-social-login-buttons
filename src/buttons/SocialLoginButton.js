@@ -1,20 +1,20 @@
 import "../fontello-social/css/social-login-font.css";
 import Icon from "./icon";
-import PropTypes from "prop-types";
+import T from "prop-types";
 import React, { Component } from "react";
 
 export default class SocialLoginButton extends Component {
     static propTypes = {
-        activeStyle: PropTypes.object,
-        children: PropTypes.node.isRequired,
-        icon: PropTypes.string,
-        iconFormat: PropTypes.func,
-        iconSize: PropTypes.string,
-        onClick: PropTypes.func,
-        size: PropTypes.string,
-        style: PropTypes.object,
-        text: PropTypes.string,
-        textAlign: PropTypes.oneOf(["left", "right", "center"]),
+        activeStyle: T.object,
+        children: T.node.isRequired,
+        icon: T.string,
+        iconFormat: T.func,
+        iconSize: T.string,
+        onClick: T.func,
+        size: T.string,
+        style: T.object,
+        text: T.string,
+        textAlign: T.oneOf(["left", "right", "center"]),
     };
 
     constructor (...args) {
