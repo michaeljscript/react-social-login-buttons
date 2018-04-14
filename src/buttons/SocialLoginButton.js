@@ -17,28 +17,21 @@ export default class SocialLoginButton extends Component {
         textAlign: T.oneOf(["left", "right", "center"]),
     };
 
-    constructor (...args) {
-        super(...args);
-        this.handleMouseEnter = this.handleMouseEnter.bind(this);
-        this.handleMouseLeave = this.handleMouseLeave.bind(this);
-        this.handleClick = this.handleClick.bind(this);
-    }
-
     state = { hovered: false };
 
-    handleMouseEnter () {
+    handleMouseEnter = () => {
         this.setState({ hovered: true });
-    }
+    };
 
-    handleMouseLeave () {
+    handleMouseLeave = () => {
         this.setState({ hovered: false });
-    }
+    };
 
-    handleClick () {
+    handleClick = () => {
         if (typeof this.props.onClick === "function") {
             this.props.onClick();
         }
-    }
+    };
 
     render () {
         const {
