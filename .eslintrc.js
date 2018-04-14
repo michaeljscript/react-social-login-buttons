@@ -16,7 +16,7 @@ module.exports = {
         "quotes": ["warn", "double"],
         "sort-keys": ["warn", "asc", { natural: true }],
         "sort-imports": [
-            "error",
+            "warn",
             {
                 ignoreCase: false,
                 ignoreMemberSort: false,
