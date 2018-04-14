@@ -9,3 +9,6 @@ logs
 
 # babel files
 .babelrc
+
+# dependencies
+node_modules
