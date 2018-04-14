@@ -4,7 +4,7 @@
   "description": "Simple login buttons for React",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "babel": "babel src/ --out-dir lib/",
     "build": "npm run babel && npm run build-styles",
     "build-watch": "nodemon --exec \"npm run build\" --ignore examples/simple/bundle.js --ignore lib/*",
@@ -64,6 +64,7 @@
     "browserify": "^14.4.0",
     "browserify-css": "^0.11.1",
     "css-loader": "^0.28.4",
+    "jest": "^22.4.3",
     "nodemon": "^1.11.0",
     "style-loader": "^0.18.2",
     "url-loader": "^0.5.9",
