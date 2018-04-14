@@ -34,16 +34,14 @@ export default class SocialLoginButton extends Component {
         } = this.props;
         const { hovered } = this.state;
 
-        const buttonStyles = {
-            ...styles.button,
-            ...{
-                height: size,
-                lineHeight: typeof text === "string" ? size : "auto",
-                textAlign,
-            },
-            ...customStyle,
-            ...(hovered && activeStyle),
-        };
+        const buttonStyles = computeButtonStyles(styles.button, {
+            activeStyle,
+            customStyle,
+            hovered,
+            size,
+            text,
+            textAlign,
+        });
 
         const childrenCount = React.Children.count(children);
 
@@ -80,6 +78,17 @@ export default class SocialLoginButton extends Component {
         );
     }
 }
+
+const computeButtonStyles = (defaults, { text, size, textAlign, customStyle, hovered, activeStyle }) => ({
+    ...defaults,
+    ...{
+        height: size,
+        lineHeight: typeof text === "string" ? size : "auto",
+        textAlign,
+    },
+    ...customStyle,
+    ...(hovered && activeStyle),
+});
 
 SocialLoginButton.propTypes = {
     activeStyle: T.object,
