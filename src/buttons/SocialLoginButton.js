@@ -112,9 +112,4 @@ const styles = {
   icon: {
     paddingRight: "10px",
   },
-  spanFix: {
-    display: "inline-block",
-    height: "100%",
-    verticalAlign: "middle",
-  },
 };
