@@ -39,7 +39,7 @@ export default class SocialLoginButton extends Component {
             ...{
                 height: size,
                 lineHeight: typeof text === "string" ? size : "auto",
-                textAlign: textAlign,
+                textAlign,
             },
             ...customStyle,
             ...(hovered && activeStyle),
