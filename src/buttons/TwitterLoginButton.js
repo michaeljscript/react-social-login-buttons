@@ -1,19 +1,13 @@
-import React from 'react';
-import SocialLoginButtonProvider from './SocialLoginButtonProvider';
+import React from "react";
+import createButton from "./create-button";
 
-const defaults = {
-    text: 'Login with Twitter',
-    icon: 'twitter',
+const config = {
+    text: "Login with Twitter",
+    icon: "twitter",
     style: { background: "#5aa4eb" },
     activeStyle: { background: "#3b82da" },
 };
 
-/**
- * Twitter login button.
- * For props check {@link SocialLoginButton}
- */
-const TwitterLoginButton = (props) => {
-    return <SocialLoginButtonProvider defaults={defaults} props={props}/>;
-};
+const TwitterLoginButton = createButton(config);
 
 export default TwitterLoginButton;

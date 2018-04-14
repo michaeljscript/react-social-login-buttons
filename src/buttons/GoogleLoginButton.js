@@ -1,19 +1,13 @@
-import React from 'react';
-import SocialLoginButtonProvider from './SocialLoginButtonProvider';
+import React from "react";
+import createButton from "./create-button";
 
-const defaults = {
-    text: 'Login with Google',
-    icon: 'gplus',
-    style: { background: '#cb3f22' },
-    activeStyle: { background: '#a5331c' },
+const config = {
+    text: "Login with Google",
+    icon: "gplus",
+    style: { background: "#cb3f22" },
+    activeStyle: { background: "#a5331c" },
 };
 
-/**
- * Google login button.
- * For props check {@link SocialLoginButton}
- */
-const GoogleLoginButton = (props) => {
-    return <SocialLoginButtonProvider defaults={defaults} props={props}/>;
-};
+const GoogleLoginButton = createButton(config);
 
 export default GoogleLoginButton;
