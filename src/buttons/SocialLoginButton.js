@@ -112,7 +112,7 @@ SocialLoginButton.defaultProps = {
 const styles = {
   button: {
     borderRadius: 3,
-    boxShadow: "#b5b5b5 0 1px 2px",
+    boxShadow: "rgba(0, 0, 0, 0.5) 0 1px 2px",
     color: "#ffffff",
     cursor: "pointer",
     fontSize: "120%",
