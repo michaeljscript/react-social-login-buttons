@@ -8,7 +8,7 @@ const SocialLoginButtonProvider = ({ defaults, props }) => {
         style: { ...defaults.style, ...props.style },
         activeStyle: { ...defaults.activeStyle, ...props.activeStyle },
     };
-    // console.log('provider:', {defaults, props}, {finalProps});
+    
     return <SocialLoginButton {...finalProps}/>;
 };
 
