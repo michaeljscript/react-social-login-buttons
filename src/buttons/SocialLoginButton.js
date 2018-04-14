@@ -4,67 +4,49 @@ import T from "prop-types";
 import React, { Component } from "react";
 
 export default class SocialLoginButton extends Component {
-    state = { hovered: false };
+  state = { hovered: false };
 
-    handleMouseEnter = () => {
-      this.setState({ hovered: true });
-    };
+  handleMouseEnter = () => {
+    this.setState({ hovered: true });
+  };
 
-    handleMouseLeave = () => {
-      this.setState({ hovered: false });
-    };
+  handleMouseLeave = () => {
+    this.setState({ hovered: false });
+  };
 
-    handleClick = () => {
-      if (typeof this.props.onClick === "function") {
-        this.props.onClick();
-      }
-    };
+  handleClick = () => {
+    if (typeof this.props.onClick === "function") {
+      this.props.onClick();
+    }
+  };
 
-    render () {
-      const {
-        style: customStyle,
-        activeStyle,
-        children,
-        text = children,
-        icon,
-        iconFormat,
-        iconSize,
-        size,
-        textAlign,
-      } = this.props;
-      const { hovered } = this.state;
+  render () {
+    const {
+      style: customStyle,
+      activeStyle,
+      children,
+      text = children,
+      icon,
+      iconFormat,
+      iconSize,
+      size,
+      textAlign,
+    } = this.props;
+    const { hovered } = this.state;
 
-      const buttonStyles = computeButtonStyles(styles.button, {
-        activeStyle,
-        customStyle,
-        hovered,
-        size,
-        text,
-        textAlign,
-      });
+    const buttonStyles = computeButtonStyles(styles.button, {
+      activeStyle,
+      customStyle,
+      hovered,
+      size,
+      text,
+      textAlign,
+    });
 
-      const childrenCount = React.Children.count(children);
+    const childrenCount = React.Children.count(children);
 
-      // classic usage of this button
-      if (childrenCount === 0) {
-        return (
-          <div
-            style={buttonStyles}
-            onClick={this.handleClick}
-            onMouseEnter={this.handleMouseEnter}
-            onMouseLeave={this.handleMouseLeave}
-          >
-            {icon && (
-              <span style={{ ...styles.icon, height: size, lineHeight: size }}>
-                <Icon name={icon} size={iconSize} format={iconFormat} />
-              </span>
-            )}
-            <span>{text}</span>
-          </div>
-        );
-      }
-
-      // children provided, rendering children as text
+    // classic usage of this button
+    if (childrenCount === 0) {
       return (
         <div
           style={buttonStyles}
@@ -72,11 +54,29 @@ export default class SocialLoginButton extends Component {
           onMouseEnter={this.handleMouseEnter}
           onMouseLeave={this.handleMouseLeave}
         >
-          <span style={styles.spanFix} />
-          {text}
+          {icon && (
+            <span style={{ ...styles.icon, height: size, lineHeight: size }}>
+              <Icon name={icon} size={iconSize} format={iconFormat} />
+            </span>
+          )}
+          <span>{text}</span>
         </div>
       );
     }
+
+    // children provided, rendering children as text
+    return (
+      <div
+        style={buttonStyles}
+        onClick={this.handleClick}
+        onMouseEnter={this.handleMouseEnter}
+        onMouseLeave={this.handleMouseLeave}
+      >
+        <span style={styles.spanFix} />
+        {text}
+      </div>
+    );
+  }
 }
 
 const computeButtonStyles = (defaults, { text, size, textAlign, customStyle, hovered, activeStyle }) => ({
