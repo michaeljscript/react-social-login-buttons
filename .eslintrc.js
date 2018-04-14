@@ -4,6 +4,7 @@ module.exports = {
     plugins: ["class-property"],
     rules: {
         "no-use-before-define": "off",
+        "indent": ["warn", 2],
         "comma-dangle": [
             "warn",
             {
