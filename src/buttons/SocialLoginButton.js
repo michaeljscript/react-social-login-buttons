@@ -4,25 +4,6 @@ import T from "prop-types";
 import React, { Component } from "react";
 
 export default class SocialLoginButton extends Component {
-    static propTypes = {
-        activeStyle: T.object,
-        children: T.node.isRequired,
-        icon: T.string,
-        iconFormat: T.func,
-        iconSize: T.string,
-        onClick: T.func,
-        size: T.string,
-        style: T.object,
-        text: T.string,
-        textAlign: T.oneOf(["left", "right", "center"]),
-    };
-
-    static defaultProps = {
-        iconSize: "26px",
-        size: "50px",
-        textAlign: "left",
-    };
-
     state = { hovered: false };
 
     handleMouseEnter = () => {
@@ -99,6 +80,25 @@ export default class SocialLoginButton extends Component {
         );
     }
 }
+
+SocialLoginButton.propTypes = {
+    activeStyle: T.object,
+    children: T.node.isRequired,
+    icon: T.string,
+    iconFormat: T.func,
+    iconSize: T.string,
+    onClick: T.func,
+    size: T.string,
+    style: T.object,
+    text: T.string,
+    textAlign: T.oneOf(["left", "right", "center"]),
+};
+
+SocialLoginButton.defaultProps = {
+    iconSize: "26px",
+    size: "50px",
+    textAlign: "left",
+};
 
 const styles = {
     button: {
