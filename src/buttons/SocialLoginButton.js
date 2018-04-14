@@ -98,7 +98,7 @@ const styles = {
     boxShadow: "rgba(0, 0, 0, 0.5) 0 1px 2px",
     color: "#ffffff",
     cursor: "pointer",
-    fontSize: "120%",
+    fontSize: "19px",
     margin: 5,
     overflow: "hidden",
     padding: "0 10px",
