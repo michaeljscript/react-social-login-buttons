@@ -22,7 +22,6 @@ export default class SocialLoginButton extends Component {
 
   render () {
     const {
-      style: customStyle,
       activeStyle,
       align,
       text,
@@ -31,15 +30,16 @@ export default class SocialLoginButton extends Component {
       iconFormat,
       iconSize,
       size,
+      style: customStyle,
     } = this.props;
     const { hovered } = this.state;
 
     const buttonStyles = computeButtonStyles(styles.button, {
       activeStyle,
+      align,
       customStyle,
       hovered,
       size,
-      align,
     });
 
     // classic usage of this button
