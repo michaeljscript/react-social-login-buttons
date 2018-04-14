@@ -11,7 +11,8 @@
     "build-styles": "webpack --entry ./src/fontello-social/css/social-login-font.css --output-path ./lib/fontello-social/css/ --output-filename social-login-font.css.js",
     "example-watch": "nodemon --exec \"npm run example\" --ignore lib/*",
     "lint:test": "eslint src",
-    "format": "eslint src --fix"
+    "format": "eslint src --fix",
+    "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "browserify-css": {
     "autoInject": true,
@@ -46,6 +47,7 @@
     "react": "^15.0.0"
   },
   "devDependencies": {
+    "@storybook/react": "^3.4.1",
     "babel-cli": "^6.24.1",
     "babel-eslint": "^8.2.3",
     "babel-loader": "^7.1.1",
@@ -72,6 +74,8 @@
     "jest": "^22.4.3",
     "nodemon": "^1.11.0",
     "prettier-eslint-cli": "^4.7.1",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
     "style-loader": "^0.18.2",
     "url-loader": "^0.5.9",
     "webpack": "^3.4.1"
