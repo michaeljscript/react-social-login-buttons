@@ -14,5 +14,14 @@ module.exports = {
             },
         ],
         "quotes": ["warn", "double"],
+        "sort-keys": ["warn", "asc", { natural: true }],
+        "sort-imports": [
+            "error",
+            {
+                ignoreCase: false,
+                ignoreMemberSort: false,
+                memberSyntaxSortOrder: ["none", "all", "multiple", "single"],
+            },
+        ],
     },
 };
