@@ -2,10 +2,10 @@ import React from "react";
 import createButton from "./create-button";
 
 const config = {
-    text: "Login with Twitter",
+    activeStyle: { background: "#3b82da" },
     icon: "twitter",
     style: { background: "#5aa4eb" },
-    activeStyle: { background: "#3b82da" },
+    text: "Login with Twitter",
 };
 
 const TwitterLoginButton = createButton(config);

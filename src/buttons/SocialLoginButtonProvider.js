@@ -3,10 +3,10 @@ import SocialLoginButton from "./SocialLoginButton";
 
 const SocialLoginButtonProvider = ({ defaults, props }) => {
     const finalProps = {
+        activeStyle: { ...defaults.activeStyle, ...props.activeStyle },
         ...defaults,
         ...props,
         style: { ...defaults.style, ...props.style },
-        activeStyle: { ...defaults.activeStyle, ...props.activeStyle },
     };
 
     return <SocialLoginButton {...finalProps} />;

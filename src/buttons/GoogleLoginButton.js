@@ -2,10 +2,10 @@ import React from "react";
 import createButton from "./create-button";
 
 const config = {
-    text: "Login with Google",
+    activeStyle: { background: "#a5331c" },
     icon: "gplus",
     style: { background: "#cb3f22" },
-    activeStyle: { background: "#a5331c" },
+    text: "Login with Google",
 };
 
 const GoogleLoginButton = createButton(config);

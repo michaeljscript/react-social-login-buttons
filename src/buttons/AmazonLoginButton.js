@@ -2,10 +2,10 @@ import React from "react";
 import createButton from "./create-button";
 
 const config = {
-    text: "Login with Amazon",
+    activeStyle: { background: "#ff9f23" },
     icon: "amazon",
     style: { background: "#f9ae32" },
-    activeStyle: { background: "#ff9f23" },
+    text: "Login with Amazon",
 };
 
 const AmazonLoginButton = createButton(config);

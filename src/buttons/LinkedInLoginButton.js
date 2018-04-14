@@ -2,10 +2,10 @@ import React from "react";
 import createButton from "./create-button";
 
 const config = {
-    text: "Login with LinkedIn",
+    activeStyle: { background: "rgb(7, 112, 169)" },
     icon: "linkedin",
     style: { background: "rgb(26, 129, 185)" },
-    activeStyle: { background: "rgb(7, 112, 169)" },
+    text: "Login with LinkedIn",
 };
 
 const LinkedInLoginButton = createButton(config);

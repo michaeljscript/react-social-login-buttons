@@ -2,10 +2,10 @@ import React from "react";
 import createButton from "./create-button";
 
 const config = {
-    text: "Login with GitHub",
+    activeStyle: { background: "#555555" },
     icon: "github-circled",
     style: { background: "#333333" },
-    activeStyle: { background: "#555555" },
+    text: "Login with GitHub",
 };
 
 const GithubLoginButton = createButton(config);
