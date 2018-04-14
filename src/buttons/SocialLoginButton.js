@@ -65,10 +65,8 @@ export default class SocialLoginButton extends Component {
 
 const computeButtonStyles = (defaults, { size, align, customStyle, hovered, activeStyle }) => ({
   ...defaults,
-  ...{
-    height: size,
-    textAlign: align,
-  },
+  height: size,
+  textAlign: align,
   ...customStyle,
   ...(hovered && activeStyle),
 });
