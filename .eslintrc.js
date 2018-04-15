@@ -27,5 +27,6 @@ module.exports = {
     ],
     "babel/semi": 1,
     "object-shorthand": ["warn", "always"],
+    "no-alert": "off",
   },
 };
