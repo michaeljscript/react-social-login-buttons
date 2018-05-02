@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 import '../fontello-social/css/social-login-font.css';
 
 const Icon = ({name, size = 26, format = (name) => `demo-icon icon-${name}`}) => <i className={format(name)}
-style={{fontSize: size}}/>;
+                                                                                    style={{fontSize: size}}/>;
 
 export default class SocialLoginButton extends Component {
 
@@ -78,39 +78,39 @@ export default class SocialLoginButton extends Component {
         // classic usage of this button
         if (childrenCount === 0) {
             return <div style={buttonStyles} onClick={this.handleClick} onMouseEnter={this.handleMouseEnter}
-            onMouseLeave={this.handleMouseLeave}>
-            {icon && <span style={{...styles.icon, height: size, lineHeight: size}}>
-            <Icon name={icon} size={iconSize} format={iconFormat}/>
-            </span>}
-            <span>{text}</span>
+                        onMouseLeave={this.handleMouseLeave}>
+                {icon && <span style={{...styles.icon, height: size, lineHeight: size}}>
+                    <Icon name={icon} size={iconSize} format={iconFormat}/>
+                </span>}
+                <span>{text}</span>
             </div>
-            }
+        }
 
-            // children provided, rendering children as text
-            return <div style={buttonStyles} onClick={this.handleClick} onMouseEnter={this.handleMouseEnter}
-            onMouseLeave={this.handleMouseLeave}>
-        <span style={styles.spanFix}/>
+        // children provided, rendering children as text
+        return <div style={buttonStyles} onClick={this.handleClick} onMouseEnter={this.handleMouseEnter}
+                    onMouseLeave={this.handleMouseLeave}>
+            <span style={styles.spanFix}/>
             {text}
         </div>
-        }
     }
+}
 
-    const styles = {
-        spanFix: {
-            height: '100%', display: 'inline-block', verticalAlign: 'middle',
-        },
-        button: {
-            fontSize: '120%',
-            color: '#ffffff',
-            margin: 5,
-            cursor: 'pointer',
-            boxShadow: '#b5b5b5 0 1px 2px',
-            borderRadius: 3,
-            userSelect: 'none',
-            overflow: 'hidden',
-            padding: '0 10px'
-        },
-        icon: {
-            paddingRight: '20px',
-        }
-    };
+const styles = {
+    spanFix: {
+        height: '100%', display: 'inline-block', verticalAlign: 'middle',
+    },
+    button: {
+        fontSize: '120%',
+        color: '#ffffff',
+        margin: 5,
+        cursor: 'pointer',
+        boxShadow: '#b5b5b5 0 1px 2px',
+        borderRadius: 3,
+        userSelect: 'none',
+        overflow: 'hidden',
+        padding: '0 10px'
+    },
+    icon: {
+        paddingRight: '20px'
+    }
+};
