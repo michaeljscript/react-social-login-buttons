@@ -111,7 +111,6 @@ const styles = {
         padding: '0 10px'
     },
     icon: {
-        paddingRight: '10px',
-        float: 'left',
+        paddingRight: '20px'
     }
 };
