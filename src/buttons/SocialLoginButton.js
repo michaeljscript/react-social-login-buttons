@@ -1,5 +1,5 @@
 import "../fontello-social/css/social-login-font.css";
-import Icon from "./icon";
+import DynamicIcon from "./DynamicIcon";
 import T from "prop-types";
 import React, { Component } from "react";
 
@@ -36,13 +36,11 @@ export default class SocialLoginButton extends Component {
 
     const buttonStyles = computeButtonStyles(styles.button, {
       activeStyle,
-      align,
       customStyle,
       hovered,
       size,
     });
 
-    // classic usage of this button
     return (
       <div
         style={buttonStyles}
@@ -51,22 +49,17 @@ export default class SocialLoginButton extends Component {
         onMouseLeave={this.handleMouseLeave}
       >
         <div style={styles.flex}>
-          {icon && (
-            <div style={{ ...styles.icon }}>
-              <Icon name={icon} size={iconSize} format={iconFormat} />
-            </div>
-          )}
-          <div>{children}</div>
+          <DynamicIcon type={icon} size={iconSize} format={iconFormat} wrapperStyle={styles.icon} />
+          <div style={{ textAlign: align, width: "100%" }}>{children}</div>
         </div>
       </div>
     );
   }
 }
 
-const computeButtonStyles = (defaults, { size, align, customStyle, hovered, activeStyle }) => ({
+const computeButtonStyles = (defaults, { size, customStyle, hovered, activeStyle }) => ({
   ...defaults,
   height: size,
-  textAlign: align,
   ...customStyle,
   ...(hovered && activeStyle),
 });
@@ -104,7 +97,7 @@ const styles = {
   },
   flex: {
     alignItems: "center",
-    display: "inline-flex",
+    display: "flex",
     height: "100%",
   },
   icon: {
