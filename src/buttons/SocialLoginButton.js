@@ -49,7 +49,8 @@ export default class SocialLoginButton extends Component {
         onMouseLeave={this.handleMouseLeave}
       >
         <div style={styles.flex}>
-          <DynamicIcon type={icon} size={iconSize} format={iconFormat} wrapperStyle={styles.icon} />
+          <DynamicIcon type={icon} size={iconSize} format={iconFormat} />
+          <div style={styles.divider} />
           <div style={{ textAlign: align, width: "100%" }}>{children}</div>
         </div>
       </div>
@@ -95,12 +96,12 @@ const styles = {
     padding: "0 10px",
     userSelect: "none",
   },
+  divider: {
+    width: "10px",
+  },
   flex: {
     alignItems: "center",
     display: "flex",
     height: "100%",
-  },
-  icon: {
-    paddingRight: "10px",
   },
 };
