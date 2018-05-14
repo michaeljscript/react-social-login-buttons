@@ -12,3 +12,9 @@ logs
 
 # dependencies
 node_modules
+
+#examples
+examples
+
+#stories
+.storybook
