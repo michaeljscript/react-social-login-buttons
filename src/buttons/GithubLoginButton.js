@@ -1,9 +1,11 @@
 import React from "react";
 import createButton from "./create-button";
+import createSvgIcon from "./createSvgIcon";
+import icon from "./github-logo-2.svg";
 
 const config = {
   activeStyle: { background: "#555555" },
-  icon: "github-circled",
+  icon: createSvgIcon(icon),
   style: { background: "#333333" },
   text: "Login with GitHub",
 };

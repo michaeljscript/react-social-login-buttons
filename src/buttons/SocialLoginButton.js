@@ -1,4 +1,3 @@
-import "../fontello-social/css/social-login-font.css";
 import DynamicIcon from "./DynamicIcon";
 import T from "prop-types";
 import React, { Component } from "react";
