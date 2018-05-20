@@ -108,7 +108,7 @@ You can create your own button.
 
 You do not have to wait for us to implement all of them.
 
-You can also use your own icons let's say from font-awesome.
+You can also use your own icons, let's say from font-awesome.
 ```js
 import React from "react";
 import createButton from "react-social-login-buttons/lib/buttons/create-button";
@@ -148,7 +148,8 @@ activeStyle styles will be applied instead of style when mouse hovers above the 
 ### `icon` {String|Node} (optional)
 
 This icon will be displayed.
-If you pass a string, <i class="" /> will be rendered.
+
+If you pass a string, `<i className={format(name)}/>` will be rendered.
 
 ### `iconSize` {String} (optional)
 
@@ -160,7 +161,7 @@ Box will have this size. Eg. "150px"
 
 ### `iconFormat` {function} (optional)
 
-Format icon className. Eg. (name) => \`fa-icon fa-icon-${name}\`
+Format icon className. Eg. `(name) => "fa-icon fa-icon-" + name`
 
 ### `textAlign` {"left" | "right" | "center"} (optional)
 
@@ -169,7 +170,7 @@ Align the text on the button (default is left).
 ## Why react-social-login-buttons ?
 
 react-social-login-buttons is focused on speed and simplicity.
-Other social buttons will be implemented later
+Other social buttons will be implemented later.
 
 ## Contribution
 
@@ -177,34 +178,39 @@ I welcome issues and pull requests on https://github.com/MichalSzorad/react-soci
 
 ## Versions
 
+##### version 2.0.0
+- Using flexbox instad of buggy styles
+- Using SVGs for smaller build sizes
+- Easier api for development
+
 ##### version 1.3.5
 
-* Change react version
+- Change react version
 
 ##### version 1.3.4
 
-* Fix package.json error
+- Fix package.json error
 
 ##### version 1.3.3
 
-* Removed react from dependency
+- Removed react from dependency
 
 ##### version 1.3.1
 
-* Fixed README.md syntax highlighting
+- Fixed README.md syntax highlighting
 
 ##### version 1.3.0
 
-* Allowed to pass children into `SocialLoginButton`
+- Allowed to pass children into `SocialLoginButton`
 
 ##### version 1.2.1
 
-* Fixed a bug when react-social-login-buttons don't compile
+- Fixed a bug when react-social-login-buttons don't compile
 
 ##### version 1.2.0
 
-* Added new buttons for: Instagram, LinkedIn, Microsoft
-* New development api - SocialLoginButtonProvider
+- Added new buttons for: Instagram, LinkedIn, Microsoft
+- New development api - SocialLoginButtonProvider
 
 ## Thanks
 
@@ -212,10 +218,10 @@ Special thanks to people from
 
 ### Fontello
 
-* http://fontello.com/
-* Awesome icon font generator
+- http://fontello.com/
+- Awesome icon font generator
 
 ### Font Awesome
 
-* http://fontawesome.io/
-* Awesome icons
+- http://fontawesome.io/
+- Awesome icons
