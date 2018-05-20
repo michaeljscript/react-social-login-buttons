@@ -1,6 +1,5 @@
 import React from "react";
 import SocialLoginButton from "./SocialLoginButton";
-import SocialLoginButtonProvider from "./SocialLoginButtonProvider";
 
 const createButton = config => props => {
   const finalProps = {
@@ -13,8 +12,6 @@ const createButton = config => props => {
   };
 
   return <SocialLoginButton {...finalProps} />;
-
-  return <SocialLoginButtonProvider defaults={config} props={props} />;
 };
 
 export default createButton;
