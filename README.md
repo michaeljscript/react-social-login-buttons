@@ -40,14 +40,15 @@ import FacebookLoginButton from "react-social-login-buttons/lib/buttons/Facebook
 Default button content - "Login with Facebook"
 
 ```js
-<FacebookLoginButton
-  onClick={() => alert("Hello")}
-/>
+<FacebookLoginButton onClick={() => alert("Hello")} />
 ```
+
 Custom button content
 
 ```js
-<FacebookLoginButton onClick={() => alert("Hello")}><span>Custom text</span></FacebookLoginButton>
+<FacebookLoginButton onClick={() => alert("Hello")}>
+  <span>Custom text</span>
+</FacebookLoginButton>
 ```
 
 ## Social Buttons Support
@@ -109,6 +110,7 @@ You can create your own button.
 You do not have to wait for us to implement all of them.
 
 You can also use your own icons, let's say from font-awesome.
+
 ```js
 import React from "react";
 import createButton from "react-social-login-buttons/lib/buttons/create-button";
@@ -125,6 +127,7 @@ const MyFacebookLoginButton = createButton(config);
 
 export default MyFacebookLoginButton;
 ```
+
 ## Props
 
 Props for every Button
@@ -179,38 +182,41 @@ I welcome issues and pull requests on https://github.com/MichalSzorad/react-soci
 ## Versions
 
 ##### version 2.0.0
-- Using flexbox instad of buggy styles
-- Using SVGs for smaller build sizes
-- Easier api for development
+
+* Using flexbox instad of floating styles
+* Using SVGs for smaller build sizes
+* Easier api for development
+* Removed SocialLoginButtonProvider
+* Using createButton util to create buttons
 
 ##### version 1.3.5
 
-- Change react version
+* Change react version
 
 ##### version 1.3.4
 
-- Fix package.json error
+* Fix package.json error
 
 ##### version 1.3.3
 
-- Removed react from dependency
+* Removed react from dependency
 
 ##### version 1.3.1
 
-- Fixed README.md syntax highlighting
+* Fixed README.md syntax highlighting
 
 ##### version 1.3.0
 
-- Allowed to pass children into `SocialLoginButton`
+* Allowed to pass children into `SocialLoginButton`
 
 ##### version 1.2.1
 
-- Fixed a bug when react-social-login-buttons don't compile
+* Fixed a bug when react-social-login-buttons don't compile
 
 ##### version 1.2.0
 
-- Added new buttons for: Instagram, LinkedIn, Microsoft
-- New development api - SocialLoginButtonProvider
+* Added new buttons for: Instagram, LinkedIn, Microsoft
+* New development api - SocialLoginButtonProvider
 
 ## Thanks
 
@@ -218,10 +224,10 @@ Special thanks to people from
 
 ### Fontello
 
-- http://fontello.com/
-- Awesome icon font generator
+* http://fontello.com/
+* Awesome icon font generator
 
 ### Font Awesome
 
-- http://fontawesome.io/
-- Awesome icons
+* http://fontawesome.io/
+* Awesome icons
