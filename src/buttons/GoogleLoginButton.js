@@ -1,7 +1,7 @@
 import React from "react";
 import createButton from "./create-button";
 import createSvgIcon from "./createSvgIcon";
-import icon from "./google-logo-3.svg";
+import icon from "./google-logo.svg";
 
 const config = {
   activeStyle: { background: "#a5331c" },
