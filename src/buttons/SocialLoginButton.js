@@ -7,10 +7,16 @@ export default class SocialLoginButton extends Component {
 
   handleMouseEnter = () => {
     this.setState({ hovered: true });
+    if (typeof this.props.onMouseEnter === "function") {
+      this.props.onMouseEnter();
+    }
   };
 
   handleMouseLeave = () => {
     this.setState({ hovered: false });
+    if (typeof this.props.onMouseLeave === "function") {
+      this.props.onMouseLeave();
+    }
   };
 
   handleClick = () => {
@@ -28,13 +34,14 @@ export default class SocialLoginButton extends Component {
       icon,
       iconFormat,
       iconSize,
+      preventActiveStyles,
       size,
       style: customStyle,
     } = this.props;
     const { hovered } = this.state;
 
     const buttonStyles = computeButtonStyles(styles.button, {
-      activeStyle,
+      activeStyle: preventActiveStyles ? customStyle : activeStyle,
       customStyle,
       hovered,
       size,
@@ -74,6 +81,9 @@ SocialLoginButton.propTypes = {
   iconFormat: T.func,
   iconSize: T.string,
   onClick: T.func,
+  onMouseEnter: T.func,
+  onMouseLeave: T.func,
+  preventActiveStyles: T.bool,
   size: T.string,
   style: T.object,
   text: T.string,
@@ -82,6 +92,7 @@ SocialLoginButton.propTypes = {
 SocialLoginButton.defaultProps = {
   align: "left",
   iconSize: "26px",
+  preventActiveStyles: false,
   size: "50px",
 };
 

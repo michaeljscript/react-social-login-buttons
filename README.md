@@ -170,6 +170,15 @@ Format icon className. Eg. `(name) => "fa-icon fa-icon-" + name`
 
 Align the text on the button (default is left).
 
+### `preventActiveStyles` {Boolean} (optional) default: false
+
+If set to true, activeStyles won't be used and will be used styles from the style prop.
+
+### Events
+* `onClick`
+* `onMouseEnter`
+* `onMouseLeave`
+
 ## Why react-social-login-buttons ?
 
 react-social-login-buttons is focused on speed and simplicity.
@@ -188,6 +197,8 @@ I welcome issues and pull requests on https://github.com/MichalSzorad/react-soci
 * Easier api for development
 * Removed SocialLoginButtonProvider
 * Using createButton util to create buttons
+* onMouseEnter, onMouseLeave handlers
+* preventActiveStyles for easier styling
 
 ##### version 1.3.5
 
