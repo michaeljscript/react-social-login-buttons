@@ -19,3 +19,6 @@ examples
 #stories
 .storybook
 stories
+
+#tests
+coverage
