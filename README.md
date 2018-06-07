@@ -192,6 +192,10 @@ I welcome issues and pull requests on https://github.com/MichalSzorad/react-soci
 
 ## Versions
 
+##### version 2.0.1
+
+- Fixed importing
+
 ##### version 2.0.0
 
 - Using flexbox instad of floating styles
