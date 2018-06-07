@@ -11,7 +11,6 @@ describe("SocialLoginButton", () => {
     render({});
   });
 
-  // TODO remove below
   it("Should listen to click events", () => {
     const eventMock = jest.fn();
     const button = render({ onClick: eventMock });
@@ -37,5 +36,12 @@ describe("SocialLoginButton", () => {
     expect(eventMock.mock.calls.length).toBe(0);
     button.simulate("mouseleave");
     expect(eventMock.mock.calls.length).toBe(1);
+  });
+
+  it("Should not crash when events fired without listeners", () => {
+    const button = render({});
+    button.simulate("mouseleave");
+    button.simulate("mouseenter");
+    button.simulate("click");
   });
 });
