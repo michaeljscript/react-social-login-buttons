@@ -1,10 +1,10 @@
 module.exports = {
-  env: { browser: true },
+  env: { browser: true, jest: true },
   extends: ["react"],
   plugins: ["babel"],
   rules: {
     "no-use-before-define": "off",
-    "indent": ["warn", 2],
+    indent: ["warn", 2],
     "comma-dangle": [
       "warn",
       {
@@ -15,7 +15,7 @@ module.exports = {
         functions: "always-multiline",
       },
     ],
-    "quotes": ["warn", "double"],
+    quotes: ["warn", "double"],
     "sort-keys": ["warn", "asc", { natural: true }],
     "sort-imports": [
       "warn",
