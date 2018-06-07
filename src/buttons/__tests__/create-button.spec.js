@@ -42,35 +42,4 @@ describe("createButton", () => {
     expect(wrapper.props().style).toBeDefined();
     expect(wrapper.props().activeStyle).toBeDefined();
   });
-
-  // TODO remove below
-  xit("Should listen to click events", () => {
-    const Button = createButton({});
-    const eventMock = jest.fn();
-    const button = shallow(<Button onClick={eventMock} />);
-
-    expect(eventMock.mock.calls.length).toBe(0);
-    button.simulate("click");
-    expect(eventMock.mock.calls.length).toBe(1);
-  });
-
-  xit("Should listen to mouse enter events", () => {
-    const Button = createButton({});
-    const eventMock = jest.fn();
-    const button = shallow(<Button onMouseEnter={eventMock} />);
-
-    expect(eventMock.mock.calls.length).toBe(0);
-    button.simulate("mouseenter");
-    expect(eventMock.mock.calls.length).toBe(1);
-  });
-
-  xit("Should listen to mouse leave events", () => {
-    const Button = createButton({});
-    const eventMock = jest.fn();
-    const button = shallow(<Button onMouseLeave={eventMock} />);
-
-    expect(eventMock.mock.calls.length).toBe(0);
-    button.simulate("mouseleave");
-    expect(eventMock.mock.calls.length).toBe(1);
-  });
 });
