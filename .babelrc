@@ -8,6 +8,5 @@
     "transform-object-rest-spread",
     "transform-async-to-generator",
     "inline-react-svg"
-  ],
-  "ignore": ["**/*.spec.js"]
+  ]
 }

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "test:lint": "eslint src stories",
-    "babel": "babel src/ --out-dir lib/",
+    "babel": "babel src/ --out-dir lib/ --ignore '**/*.spec.js'",
     "build": "npm run babel",
     "build-watch": "nodemon --exec \"npm run build\" --ignore lib/*",
     "example-watch": "nodemon --exec \"npm run example\" --ignore lib/*",
