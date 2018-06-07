@@ -11,7 +11,7 @@ const DynamicIcon = ({ type: Component, size, format }) => {
 DynamicIcon.propTypes = {
   format: T.func,
   size: T.oneOfType([T.number, T.string]),
-  type: T.oneOfType([T.string, T.node]),
+  type: T.oneOfType([T.string, T.node, T.func]),
 };
 
 export default DynamicIcon;

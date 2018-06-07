@@ -77,7 +77,7 @@ SocialLoginButton.propTypes = {
   activeStyle: T.object,
   align: T.oneOf(["left", "right", "center"]),
   children: T.node,
-  icon: T.string,
+  icon: T.oneOfType([T.string, T.node, T.func]),
   iconFormat: T.func,
   iconSize: T.string,
   onClick: T.func,
