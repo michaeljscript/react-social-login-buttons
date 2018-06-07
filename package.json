@@ -4,14 +4,14 @@
   "description": "Simple login buttons for React",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "test:lint": "eslint src stories",
     "babel": "babel src/ --out-dir lib/",
-    "build": "npm run babel && npm run build-styles",
-    "build-watch": "nodemon --exec \"npm run build\" --ignore examples/simple/bundle.js --ignore lib/*",
-    "build-styles": "webpack --entry ./src/fontello-social/css/social-login-font.css --output-path ./lib/fontello-social/css/ --output-filename social-login-font.css.js",
-    "example-watch": "nodemon --exec \"npm run example\" --ignore examples/simple/bundle.js --ignore lib/*",
-    "prepublish": "npm run build",
-    "prepare": "npm run build"
+    "build": "npm run babel",
+    "build-watch": "nodemon --exec \"npm run build\" --ignore lib/*",
+    "example-watch": "nodemon --exec \"npm run example\" --ignore lib/*",
+    "format": "eslint src stories --fix",
+    "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "browserify-css": {
     "autoInject": true,
@@ -22,15 +22,7 @@
     "type": "git",
     "url": "git+https://github.com/MichalSzorad/react-social-login-buttons.git"
   },
-  "keywords": [
-    "react",
-    "social",
-    "login",
-    "buttons",
-    "facebook",
-    "google",
-    "react-social-login-buttons"
-  ],
+  "keywords": ["react", "social", "login", "buttons", "facebook", "google", "react-social-login-buttons"],
   "author": "Michal Szorad, miso.szorad@gmail.com",
   "best-phrase": "undefined is not defined",
   "about": "This is my first library, please be nice to me",
@@ -43,11 +35,14 @@
     "prop-types": "^15.5.10"
   },
   "peerDependencies": {
-    "react": "^15.0.0"
+    "react": "^15.0.0 || ^16.0.0"
   },
   "devDependencies": {
+    "@storybook/react": "^3.4.1",
     "babel-cli": "^6.24.1",
+    "babel-eslint": "^8.2.3",
     "babel-loader": "^7.1.1",
+    "babel-plugin-inline-react-svg": "^0.5.2",
     "babel-plugin-react-css-modules": "^3.1.0",
     "babel-plugin-react-html-attrs": "^2.0.0",
     "babel-plugin-transform-async-to-generator": "^6.24.1",
@@ -64,9 +59,18 @@
     "browserify": "^14.4.0",
     "browserify-css": "^0.11.1",
     "css-loader": "^0.28.4",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint": "^4.19.1",
+    "eslint-config-react": "^1.1.7",
+    "eslint-plugin-babel": "^5.0.0",
+    "eslint-plugin-react": "^7.7.0",
+    "jest": "^22.4.3",
     "nodemon": "^1.11.0",
+    "prettier-eslint-cli": "^4.7.1",
+    "react": "^16.3.1",
+    "react-dom": "^16.4.0",
     "style-loader": "^0.18.2",
-    "url-loader": "^0.5.9",
-    "webpack": "^3.4.1"
+    "url-loader": "^0.5.9"
   }
 }

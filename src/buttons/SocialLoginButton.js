@@ -1,117 +1,119 @@
-import PropTypes from 'prop-types';
-import React, {Component} from 'react';
-
-import '../fontello-social/css/social-login-font.css';
-
-const Icon = ({name, size = 26, format = (name) => `demo-icon icon-${name}`}) => <i className={format(name)}
-                                                                                    style={{fontSize: size}}/>;
+import DynamicIcon from "./DynamicIcon";
+import T from "prop-types";
+import React, { Component } from "react";
 
 export default class SocialLoginButton extends Component {
+  state = { hovered: false };
 
-    static propTypes = {
-
-        /** Will be triggered when clicked on the button. */
-        onClick: PropTypes.func,
-
-        /** Custom button styles */
-        style: PropTypes.object,
-
-        /** activeStyle styles will be applied instead of style when mouse hovers above the element */
-        activeStyle: PropTypes.object,
-
-        /** This text will be displayed */
-        text: PropTypes.string,
-
-        /** This icon will be displayed */
-        icon: PropTypes.string,
-
-        /** Box will have this size */
-        size: PropTypes.string,
-
-        /** Icon will have this size. Eg. 26px */
-        iconSize: PropTypes.string,
-
-        /** Format icon className. Eg. (name) => `fa-icon fa-icon-${name}` */
-        iconFormat: PropTypes.func,
-
-        /** Text alignment of the button. Default 'left' */
-        textAlign: PropTypes.oneOf(['left', 'right', 'center'])
-    };
-
-    state = {hovered: false};
-
-    constructor(...args) {
-        super(...args);
-        this.handleMouseEnter = this.handleMouseEnter.bind(this);
-        this.handleMouseLeave = this.handleMouseLeave.bind(this);
-        this.handleClick = this.handleClick.bind(this);
+  handleMouseEnter = () => {
+    this.setState({ hovered: true });
+    if (typeof this.props.onMouseEnter === "function") {
+      this.props.onMouseEnter();
     }
+  };
 
-    handleMouseEnter() {
-        this.setState({hovered: true});
+  handleMouseLeave = () => {
+    this.setState({ hovered: false });
+    if (typeof this.props.onMouseLeave === "function") {
+      this.props.onMouseLeave();
     }
+  };
 
-    handleMouseLeave() {
-        this.setState({hovered: false});
+  handleClick = () => {
+    if (typeof this.props.onClick === "function") {
+      this.props.onClick();
     }
+  };
 
-    handleClick() {
-        if (typeof this.props.onClick === 'function') {
-            this.props.onClick();
-        }
-    }
+  render () {
+    const {
+      activeStyle,
+      align,
+      text,
+      children = text,
+      icon,
+      iconFormat,
+      iconSize,
+      preventActiveStyles,
+      size,
+      style: customStyle,
+    } = this.props;
+    const { hovered } = this.state;
 
-    render() {
-        const {style: customStyle, activeStyle, children, text = children, icon, iconFormat, iconSize = '26px', size = '50px', textAlign = 'left'} = this.props;
-        const {hovered} = this.state;
+    const buttonStyles = computeButtonStyles(styles.button, {
+      activeStyle: preventActiveStyles ? customStyle : activeStyle,
+      customStyle,
+      hovered,
+      size,
+    });
 
-        const buttonStyles = {
-            ...styles.button, ...{
-                lineHeight: typeof text === 'string' ? size : 'auto',
-                height: size,
-                textAlign: textAlign
-            }, ...customStyle, ...(hovered && activeStyle)
-        };
-
-        const childrenCount = React.Children.count(children);
-
-        // classic usage of this button
-        if (childrenCount === 0) {
-            return <div style={buttonStyles} onClick={this.handleClick} onMouseEnter={this.handleMouseEnter}
-                        onMouseLeave={this.handleMouseLeave}>
-                {icon && <span style={{...styles.icon, height: size, lineHeight: size}}>
-                    <Icon name={icon} size={iconSize} format={iconFormat}/>
-                </span>}
-                <span>{text}</span>
-            </div>
-        }
-
-        // children provided, rendering children as text
-        return <div style={buttonStyles} onClick={this.handleClick} onMouseEnter={this.handleMouseEnter}
-                    onMouseLeave={this.handleMouseLeave}>
-            <span style={styles.spanFix}/>
-            {text}
+    return (
+      <div
+        style={buttonStyles}
+        onClick={this.handleClick}
+        onMouseEnter={this.handleMouseEnter}
+        onMouseLeave={this.handleMouseLeave}
+      >
+        <div style={styles.flex}>
+          <div style={{ display: "flex", justifyContent: "center", minWidth: iconSize }}>
+            <DynamicIcon type={icon} size={iconSize} format={iconFormat} />
+          </div>
+          <div style={styles.divider} />
+          <div style={{ textAlign: align, width: "100%" }}>{children}</div>
         </div>
-    }
+      </div>
+    );
+  }
 }
 
+const computeButtonStyles = (defaults, { size, customStyle, hovered, activeStyle }) => ({
+  ...defaults,
+  height: size,
+  ...customStyle,
+  ...(hovered && activeStyle),
+});
+
+SocialLoginButton.propTypes = {
+  activeStyle: T.object,
+  align: T.oneOf(["left", "right", "center"]),
+  children: T.node,
+  icon: T.oneOfType([T.string, T.node, T.func]),
+  iconFormat: T.func,
+  iconSize: T.string,
+  onClick: T.func,
+  onMouseEnter: T.func,
+  onMouseLeave: T.func,
+  preventActiveStyles: T.bool,
+  size: T.string,
+  style: T.object,
+  text: T.string,
+};
+
+SocialLoginButton.defaultProps = {
+  align: "left",
+  iconSize: "26px",
+  preventActiveStyles: false,
+  size: "50px",
+};
+
 const styles = {
-    spanFix: {
-        height: '100%', display: 'inline-block', verticalAlign: 'middle',
-    },
-    button: {
-        fontSize: '120%',
-        color: '#ffffff',
-        margin: 5,
-        cursor: 'pointer',
-        boxShadow: '#b5b5b5 0 1px 2px',
-        borderRadius: 3,
-        userSelect: 'none',
-        overflow: 'hidden',
-        padding: '0 10px'
-    },
-    icon: {
-        paddingRight: '10px',
-        float: 'left',
-    }
+  button: {
+    borderRadius: 3,
+    boxShadow: "rgba(0, 0, 0, 0.5) 0 1px 2px",
+    color: "#ffffff",
+    cursor: "pointer",
+    fontSize: "19px",
+    margin: 5,
+    overflow: "hidden",
+    padding: "0 10px",
+    userSelect: "none",
+  },
+  divider: {
+    width: "10px",
+  },
+  flex: {
+    alignItems: "center",
+    display: "flex",
+    height: "100%",
+  },
 };

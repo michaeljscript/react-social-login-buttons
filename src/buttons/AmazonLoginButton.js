@@ -1,19 +1,15 @@
-import React from 'react';
-import SocialLoginButtonProvider from './SocialLoginButtonProvider';
+import React from "react";
+import createButton from "./create-button";
+import createSvgIcon from "./createSvgIcon";
+import icon from "./amazon-logo.svg";
 
-const defaults = {
-    text: 'Login with Amazon',
-    icon: 'amazon',
-    style: {background: "#f9ae32"},
-    activeStyle: {background: "#ff9f23"}
+const config = {
+  activeStyle: { background: "#ff9f23" },
+  icon: createSvgIcon(icon),
+  style: { background: "#f9ae32" },
+  text: "Login with Amazon",
 };
 
-/**
- * Amazon login button.
- * For props check {@link SocialLoginButton}
- */
-const AmazonLoginButton = (props) => {
-    return <SocialLoginButtonProvider defaults={defaults} props={props}/>;
-};
+const AmazonLoginButton = createButton(config);
 
 export default AmazonLoginButton;

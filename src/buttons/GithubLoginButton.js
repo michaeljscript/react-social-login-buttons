@@ -1,18 +1,15 @@
-import React from 'react';
-import SocialLoginButtonProvider from './SocialLoginButtonProvider';
+import React from "react";
+import createButton from "./create-button";
+import createSvgIcon from "./createSvgIcon";
+import icon from "./github-logo.svg";
 
-const defaults = {
-    text: 'Login with GitHub',
-    icon: 'github-circled',
-    style: {background: "#333333"},
-    activeStyle: {background: '#555555'}
+const config = {
+  activeStyle: { background: "#555555" },
+  icon: createSvgIcon(icon),
+  style: { background: "#333333" },
+  text: "Login with GitHub",
 };
-/**
- * Github login button.
- * For props check {@link SocialLoginButton}
- */
-const GithubLoginButton = (props) => {
-    return <SocialLoginButtonProvider defaults={defaults} props={props}/>;
-};
+
+const GithubLoginButton = createButton(config);
 
 export default GithubLoginButton;

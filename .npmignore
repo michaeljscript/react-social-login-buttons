@@ -9,3 +9,16 @@ logs
 
 # babel files
 .babelrc
+
+# dependencies
+node_modules
+
+#examples
+examples
+
+#stories
+.storybook
+stories
+
+#tests
+coverage

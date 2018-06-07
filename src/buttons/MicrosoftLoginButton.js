@@ -1,19 +1,15 @@
-import React from 'react';
-import SocialLoginButtonProvider from './SocialLoginButtonProvider';
+import React from "react";
+import createButton from "./create-button";
+import createSvgIcon from "./createSvgIcon";
+import icon from "./microsoft-logo.svg";
 
-const defaults = {
-    text: 'Login with Microsoft',
-    icon: 'windows',
-    style: {background: "rgb(50, 159, 253)"},
-    activeStyle: {background: "rgb(0, 137, 255)"}
+const config = {
+  activeStyle: { background: "rgb(0, 137, 255)" },
+  icon: createSvgIcon(icon),
+  style: { background: "rgb(50, 159, 253)" },
+  text: "Login with Microsoft",
 };
-/**
- * Microsoft login button.
- * For props check {@link SocialLoginButton}
- * @extends {SocialLoginButton}
- */
-const MicrosoftLoginButton = (props) => {
-    return <SocialLoginButtonProvider defaults={defaults} props={props}/>
-};
+
+const MicrosoftLoginButton = createButton(config);
 
 export default MicrosoftLoginButton;

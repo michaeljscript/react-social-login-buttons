@@ -1,1 +1,3 @@
-module.exports = require('./buttons');
+import * as buttons from "./buttons";
+
+export default buttons;
