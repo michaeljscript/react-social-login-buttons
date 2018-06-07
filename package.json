@@ -22,7 +22,15 @@
     "type": "git",
     "url": "git+https://github.com/MichalSzorad/react-social-login-buttons.git"
   },
-  "keywords": ["react", "social", "login", "buttons", "facebook", "google", "react-social-login-buttons"],
+  "keywords": [
+    "react",
+    "social",
+    "login",
+    "buttons",
+    "facebook",
+    "google",
+    "react-social-login-buttons"
+  ],
   "author": "Michal Szorad, miso.szorad@gmail.com",
   "best-phrase": "undefined is not defined",
   "about": "This is my first library, please be nice to me",
@@ -59,6 +67,8 @@
     "browserify": "^14.4.0",
     "browserify-css": "^0.11.1",
     "css-loader": "^0.28.4",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.19.1",
     "eslint-config-react": "^1.1.7",
     "eslint-plugin-babel": "^5.0.0",
