@@ -1,7 +1,7 @@
 import * as buttons from "../src/buttons";
 import { FacebookLoginButton } from "../src/buttons";
-import createButton from "../src/buttons/create-button";
 import React from "react";
+import createButton from "../src/buttons/create-button";
 import { storiesOf } from "@storybook/react";
 
 const renderAllButtons = buttons => (
