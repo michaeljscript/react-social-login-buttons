@@ -237,14 +237,16 @@ I welcome issues and pull requests on https://github.com/MichalSzorad/react-soci
 
 ## Thanks
 
-Special thanks to people from
+Special thanks to people creating awesome svg icons
 
-### Fontello
+- [SimpleIcon](https://www.flaticon.com/authors/simpleicon)
 
-- http://fontello.com/
-- Awesome icon font generator
+- [Simple Icons](https://github.com/simple-icons/simple-icons) 
 
-### Font Awesome
+- [iconmonstr](https://iconmonstr.com/amazon-1-svg/)
 
-- http://fontawesome.io/
-- Awesome icons
+- [freepik](https://www.flaticon.com/free-icon/instagram-logo_87390)
+
+- [Icomoon](https://www.flaticon.com/authors/icomoon)
+
+- [icons8](https://icons8.com/icon/set/google/all)
