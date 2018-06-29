@@ -3,6 +3,7 @@
   "version": "2.0.1",
   "description": "Simple login buttons for React",
   "main": "./lib/index.js",
+  "types": "./src/types.d.ts",
   "scripts": {
     "test": "jest",
     "test:lint": "eslint src stories",
