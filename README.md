@@ -39,13 +39,13 @@ import FacebookLoginButton from "react-social-login-buttons/lib/buttons/Facebook
 
 Default button content - "Login with Facebook"
 
-```js
+```jsx
 <FacebookLoginButton onClick={() => alert("Hello")} />
 ```
 
 Custom button content
 
-```js
+```jsx
 <FacebookLoginButton onClick={() => alert("Hello")}>
   <span>Custom text</span>
 </FacebookLoginButton>
@@ -57,49 +57,49 @@ We currently support just a few login buttons. Others will be implemented later.
 
 #### FacebookLoginButton
 
-```js
+```jsx
 <FacebookLoginButton onClick={() => alert("Hello")} />
 ```
 
 #### GoogleLoginButton
 
-```js
+```jsx
 <GoogleLoginButton onClick={() => alert("Hello")} />
 ```
 
 #### GithubLoginButton
 
-```js
+```jsx
 <GithubLoginButton onClick={() => alert("Hello")} />
 ```
 
 #### TwitterLoginButton
 
-```js
+```jsx
 <TwitterLoginButton onClick={() => alert("Hello")} />
 ```
 
 #### AmazonLoginButton
 
-```js
+```jsx
 <AmazonLoginButton onClick={() => alert("Hello")} />
 ```
 
 #### InstagramLoginButton
 
-```js
+```jsx
 <InstagramLoginButton onClick={() => alert("Hello")} />
 ```
 
 #### LinkedInLoginButton
 
-```js
+```jsx
 <LinkedInLoginButton onClick={() => alert("Hello")} />
 ```
 
 #### MicrosoftLoginButton
 
-```js
+```jsx
 <MicrosoftLoginButton onClick={() => alert("Hello")} />
 ```
 
