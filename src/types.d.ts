@@ -32,6 +32,13 @@ declare class SpecificSocialLoginButton extends React.Component<SpecificSocialLo
 
 declare module "react-social-login-buttons" {
   export class FacebookLoginButton extends SpecificSocialLoginButton {}
+  export class GoogleLoginButton extends SpecificSocialLoginButton {}
+  export class GithubLoginButton extends SpecificSocialLoginButton {}
+  export class TwitterLoginButton extends SpecificSocialLoginButton {}
+  export class AmazonLoginButton extends SpecificSocialLoginButton {}
+  export class InstagramLoginButton extends SpecificSocialLoginButton {}
+  export class LinkedInLoginButton extends SpecificSocialLoginButton {}
+  export class MicrosoftLoginButton extends SpecificSocialLoginButton {}
 }
 
 
