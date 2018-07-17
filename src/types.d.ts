@@ -24,7 +24,7 @@ interface SpecificSocialLoginButtonProps {
   style?: object
 
   /** Align of the button text. */
-  textAlign?: "left" | "center" | "right"
+  align?: "left" | "center" | "right"
 
 }
 
