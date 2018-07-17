@@ -40,5 +40,3 @@ declare module "react-social-login-buttons" {
   export class LinkedInLoginButton extends SpecificSocialLoginButton {}
   export class MicrosoftLoginButton extends SpecificSocialLoginButton {}
 }
-
-
