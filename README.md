@@ -192,6 +192,9 @@ I welcome issues and pull requests on https://github.com/MichalSzorad/react-soci
 
 ## Versions
 
+##### version 2.1.1
+- Fixed TypeScript definitions
+
 ##### version 2.1.0
 
 - Add TypeScript definitions
