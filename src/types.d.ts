@@ -1,4 +1,4 @@
-import React from "react"
+import {Component} from "react"
 
 interface SpecificSocialLoginButtonProps {
   onClick?: () => any
@@ -9,7 +9,7 @@ interface SpecificSocialLoginButtonProps {
   activeStyle?: object
 
   /** Icon will be used. Can be a react component or a string. If string provided, will render an <i> element, see `iconFormat`. */
-  icon?: string|React.Component|Function
+  icon?: string|Component|Function
 
   /** If icon is a string, then will render an <i> element with the classname returned from this function. */
   iconFormat?: (iconName: string) => string
@@ -28,15 +28,24 @@ interface SpecificSocialLoginButtonProps {
 
 }
 
-declare class SpecificSocialLoginButton extends React.Component<SpecificSocialLoginButtonProps, any> {}
+declare class SpecificSocialLoginButton extends Component<SpecificSocialLoginButtonProps, any> {}
 
-declare module "react-social-login-buttons" {
-  export class FacebookLoginButton extends SpecificSocialLoginButton {}
-  export class GoogleLoginButton extends SpecificSocialLoginButton {}
-  export class GithubLoginButton extends SpecificSocialLoginButton {}
-  export class TwitterLoginButton extends SpecificSocialLoginButton {}
-  export class AmazonLoginButton extends SpecificSocialLoginButton {}
-  export class InstagramLoginButton extends SpecificSocialLoginButton {}
-  export class LinkedInLoginButton extends SpecificSocialLoginButton {}
-  export class MicrosoftLoginButton extends SpecificSocialLoginButton {}
+declare class FacebookLoginButton extends SpecificSocialLoginButton {}
+declare class GoogleLoginButton extends SpecificSocialLoginButton {}
+declare class GithubLoginButton extends SpecificSocialLoginButton {}
+declare class TwitterLoginButton extends SpecificSocialLoginButton {}
+declare class AmazonLoginButton extends SpecificSocialLoginButton {}
+declare class InstagramLoginButton extends SpecificSocialLoginButton {}
+declare class LinkedInLoginButton extends SpecificSocialLoginButton {}
+declare class MicrosoftLoginButton extends SpecificSocialLoginButton {}
+
+export {
+  FacebookLoginButton,
+  GoogleLoginButton,
+  GithubLoginButton,
+  TwitterLoginButton,
+  AmazonLoginButton,
+  InstagramLoginButton,
+  LinkedInLoginButton,
+  MicrosoftLoginButton
 }
