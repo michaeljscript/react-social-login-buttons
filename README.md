@@ -29,7 +29,7 @@ ES6 imports:
 import { FacebookLoginButton } from "react-social-login-buttons";
 ```
 
-ES6 imports optimized:
+ES6 imports optimized (deprecated):
 
 ```js
 import FacebookLoginButton from "react-social-login-buttons/lib/buttons/FacebookLoginButton";
@@ -115,7 +115,7 @@ You can also pass a component to the icon prop.
 
 ```js
 import React from "react";
-import createButton from "react-social-login-buttons/lib/buttons/create-button";
+import {createButton} from "react-social-login-buttons";
 
 const config = {
   text: "Login with Facebook",

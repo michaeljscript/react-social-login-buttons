@@ -1,4 +1,4 @@
-import {Component} from "react"
+import {Component, ComponentClass} from "react"
 
 interface SpecificSocialLoginButtonProps {
   onClick?: () => any
@@ -26,6 +26,8 @@ interface SpecificSocialLoginButtonProps {
   /** Align of the button text. */
   align?: "left" | "center" | "right"
 
+  /** Text will be displayed */
+  text?: string
 }
 
 declare class SpecificSocialLoginButton extends Component<SpecificSocialLoginButtonProps, any> {}
@@ -39,6 +41,8 @@ declare class InstagramLoginButton extends SpecificSocialLoginButton {}
 declare class LinkedInLoginButton extends SpecificSocialLoginButton {}
 declare class MicrosoftLoginButton extends SpecificSocialLoginButton {}
 
+declare const createButton: (props: SpecificSocialLoginButtonProps) => ComponentClass<SpecificSocialLoginButtonProps>
+
 export {
   FacebookLoginButton,
   GoogleLoginButton,
@@ -47,5 +51,6 @@ export {
   AmazonLoginButton,
   InstagramLoginButton,
   LinkedInLoginButton,
-  MicrosoftLoginButton
+  MicrosoftLoginButton,
+  createButton,
 }

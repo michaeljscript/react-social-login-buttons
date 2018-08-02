@@ -6,3 +6,4 @@ export { default as AmazonLoginButton } from "./AmazonLoginButton";
 export { default as InstagramLoginButton } from "./InstagramLoginButton";
 export { default as LinkedInLoginButton } from "./LinkedInLoginButton";
 export { default as MicrosoftLoginButton } from "./MicrosoftLoginButton";
+export { default as createButton } from "./create-button";
