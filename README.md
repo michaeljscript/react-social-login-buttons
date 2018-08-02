@@ -192,6 +192,10 @@ I welcome issues and pull requests on https://github.com/MichalSzorad/react-soci
 
 ## Versions
 
+##### version 2.1.2
+- Added TypeScript definition for createButton util
+- Deprecate optimized imports
+
 ##### version 2.1.1
 - Fixed TypeScript definitions
 
