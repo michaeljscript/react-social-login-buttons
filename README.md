@@ -29,7 +29,7 @@ ES6 imports:
 import { FacebookLoginButton } from "react-social-login-buttons";
 ```
 
-ES6 imports optimized:
+ES6 imports optimized (deprecated):
 
 ```js
 import FacebookLoginButton from "react-social-login-buttons/lib/buttons/FacebookLoginButton";
@@ -115,7 +115,7 @@ You can also pass a component to the icon prop.
 
 ```js
 import React from "react";
-import createButton from "react-social-login-buttons/lib/buttons/create-button";
+import {createButton} from "react-social-login-buttons";
 
 const config = {
   text: "Login with Facebook",
@@ -168,7 +168,7 @@ Box will have this size. Eg. "150px"
 
 Format icon className. Eg. `(name) => "fa-icon fa-icon-" + name`
 
-### `textAlign` {"left" | "right" | "center"} (optional)
+### `align` {"left" | "right" | "center"} (optional)
 
 Align the text on the button (default is left).
 
@@ -191,6 +191,18 @@ react-social-login-buttons is focused on speed and simplicity.
 I welcome issues and pull requests on https://github.com/MichalSzorad/react-social-login-buttons
 
 ## Versions
+
+##### version 2.1.2
+- Added TypeScript definition for createButton util
+- Deprecate optimized imports
+
+##### version 2.1.1
+- Fixed TypeScript definitions
+
+##### version 2.1.0
+
+- Add TypeScript definitions
+- Add Travis CI
 
 ##### version 2.0.1
 
