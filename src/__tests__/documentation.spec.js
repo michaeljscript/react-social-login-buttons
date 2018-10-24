@@ -1,5 +1,4 @@
 import { readFileSync } from "fs";
-
 import * as exportedUtils from "../";
 
 describe('documentation', () => {
