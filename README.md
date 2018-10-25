@@ -103,6 +103,12 @@ We currently support just a few login buttons. Others will be implemented later.
 <MicrosoftLoginButton onClick={() => alert("Hello")} />
 ```
 
+#### BufferLoginButton
+
+```jsx
+<BufferLoginButton onClick={() => alert("Hello")} />
+```
+
 ## Create your own button
 
 You can create your own button.
@@ -112,6 +118,8 @@ You do not have to wait for us to implement all of them.
 You can also use your own icons, let's say from font-awesome.
 
 You can also pass a component to the icon prop.
+
+Util `createSvgIcon` is deprecated and should not be used.
 
 ```js
 import React from "react";
