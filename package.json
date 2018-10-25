@@ -23,7 +23,15 @@
     "type": "git",
     "url": "git+https://github.com/MichalSzorad/react-social-login-buttons.git"
   },
-  "keywords": ["react", "social", "login", "buttons", "facebook", "google", "react-social-login-buttons"],
+  "keywords": [
+    "react",
+    "social",
+    "login",
+    "buttons",
+    "facebook",
+    "google",
+    "react-social-login-buttons"
+  ],
   "author": "Michal Szorad, miso.szorad@gmail.com",
   "best-phrase": "undefined is not defined",
   "about": "This is my first library, please be nice to me",
