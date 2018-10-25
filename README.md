@@ -119,8 +119,6 @@ You can also use your own icons, let's say from font-awesome.
 
 You can also pass a component to the icon prop.
 
-Util `createSvgIcon` is deprecated and should not be used.
-
 ```js
 import React from "react";
 import {createButton} from "react-social-login-buttons";
@@ -136,6 +134,20 @@ const config = {
 const MyFacebookLoginButton = createButton(config);
 
 export default MyFacebookLoginButton;
+```
+
+Config can also look like.
+```js
+import svgIcon from "./my-svg.svg";
+import {createSvgIcon} from "react-social-login-buttons";
+
+const config = {
+  text: "Login with Facebook",
+  icon: createSvgIcon(svgIcon),
+  iconFormat: name => `fa fa-${name}`,
+  style: { background: "#3b5998" },
+  activeStyle: { background: "#293e69" }
+};
 ```
 
 ## Props
