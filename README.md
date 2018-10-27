@@ -212,6 +212,10 @@ I welcome issues and pull requests on https://github.com/MichalSzorad/react-soci
 
 ## Versions
 
+##### version 2.2.0
+- Added Buffer login button
+- Exposed createSvgIcon util
+
 ##### version 2.1.2
 - Added TypeScript definition for createButton util
 - Deprecate optimized imports
