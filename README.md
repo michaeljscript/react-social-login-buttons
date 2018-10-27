@@ -103,6 +103,12 @@ We currently support just a few login buttons. Others will be implemented later.
 <MicrosoftLoginButton onClick={() => alert("Hello")} />
 ```
 
+#### BufferLoginButton
+
+```jsx
+<BufferLoginButton onClick={() => alert("Hello")} />
+```
+
 ## Create your own button
 
 You can create your own button.
@@ -128,6 +134,20 @@ const config = {
 const MyFacebookLoginButton = createButton(config);
 
 export default MyFacebookLoginButton;
+```
+
+Config can also look like.
+```js
+import svgIcon from "./my-svg.svg";
+import {createSvgIcon} from "react-social-login-buttons";
+
+const config = {
+  text: "Login with Facebook",
+  icon: createSvgIcon(svgIcon),
+  iconFormat: name => `fa fa-${name}`,
+  style: { background: "#3b5998" },
+  activeStyle: { background: "#293e69" }
+};
 ```
 
 ## Props
