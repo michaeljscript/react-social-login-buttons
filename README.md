@@ -162,6 +162,10 @@ Will be triggered when clicked on the button.
 
 Custom button styles
 
+### `className` {String} (optional)
+
+Custom button class
+
 ### `children` {React.children} (optional)
 
 You can pass any children to our buttons.
@@ -211,6 +215,9 @@ react-social-login-buttons is focused on speed and simplicity.
 I welcome issues and pull requests on https://github.com/MichalSzorad/react-social-login-buttons
 
 ## Versions
+
+##### version 2.3.0
+- Add support for styled-components
 
 ##### version 2.2.0
 - Added Buffer login button
