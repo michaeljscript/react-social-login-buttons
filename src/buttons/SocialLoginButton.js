@@ -25,7 +25,7 @@ export default class SocialLoginButton extends Component {
     }
   };
 
-  render() {
+  render () {
     const {
       activeStyle,
       align,
@@ -79,6 +79,7 @@ SocialLoginButton.propTypes = {
   activeStyle: T.object,
   align: T.oneOf(["left", "right", "center"]),
   children: T.node,
+  className: T.string,
   icon: T.oneOfType([T.string, T.node, T.func]),
   iconFormat: T.func,
   iconSize: T.string,
