@@ -25,12 +25,13 @@ export default class SocialLoginButton extends Component {
     }
   };
 
-  render () {
+  render() {
     const {
       activeStyle,
       align,
       text,
       children = text,
+      className,
       icon,
       iconFormat,
       iconSize,
@@ -53,6 +54,7 @@ export default class SocialLoginButton extends Component {
         onClick={this.handleClick}
         onMouseEnter={this.handleMouseEnter}
         onMouseLeave={this.handleMouseLeave}
+        {...{ className }}
       >
         <div style={styles.flex}>
           <div style={{ display: "flex", justifyContent: "center", minWidth: iconSize }}>
