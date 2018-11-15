@@ -31,6 +31,7 @@ export default class SocialLoginButton extends Component {
       align,
       text,
       children = text,
+      className,
       icon,
       iconFormat,
       iconSize,
@@ -53,6 +54,7 @@ export default class SocialLoginButton extends Component {
         onClick={this.handleClick}
         onMouseEnter={this.handleMouseEnter}
         onMouseLeave={this.handleMouseLeave}
+        {...{ className }}
       >
         <div style={styles.flex}>
           <div style={{ display: "flex", justifyContent: "center", minWidth: iconSize }}>
@@ -77,6 +79,7 @@ SocialLoginButton.propTypes = {
   activeStyle: T.object,
   align: T.oneOf(["left", "right", "center"]),
   children: T.node,
+  className: T.string,
   icon: T.oneOfType([T.string, T.node, T.func]),
   iconFormat: T.func,
   iconSize: T.string,

@@ -8,6 +8,9 @@ interface SpecificSocialLoginButtonProps {
   /** This style will be used when an user hovers above the button. */
   activeStyle?: object
 
+  /** Root element will have this className */
+  className?: string
+
   /** Icon will be used. Can be a react component or a string. If string provided, will render an <i> element, see `iconFormat`. */
   icon?: string | Component | Function
 
