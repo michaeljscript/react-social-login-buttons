@@ -1,6 +1,6 @@
 {
   "name": "react-social-login-buttons",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "Simple social login buttons for React",
   "main": "./lib/index.js",
   "types": "./src/types.d.ts",
