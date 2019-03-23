@@ -1,5 +1,7 @@
 # React Social Login Buttons
 
+Live demo https://codesandbox.io/s/3rpq558rv5
+
 A simple package to display social login buttons using React.
 
 Buttons do not provide any social logic.
