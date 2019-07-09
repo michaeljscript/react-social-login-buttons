@@ -47,11 +47,11 @@
     "react": "^15.0.0 || ^16.0.0"
   },
   "devDependencies": {
-    "@storybook/react": "^3.4.1",
+    "@storybook/react": "^5.1.9",
     "babel-cli": "^6.24.1",
     "babel-eslint": "^8.2.3",
     "babel-loader": "^7.1.1",
-    "babel-plugin-inline-react-svg": "^0.5.2",
+    "babel-plugin-inline-react-svg": "^1.1.0",
     "babel-plugin-react-css-modules": "^3.1.0",
     "babel-plugin-react-html-attrs": "^2.0.0",
     "babel-plugin-transform-async-to-generator": "^6.24.1",
@@ -66,20 +66,20 @@
     "babel-preset-stage-1": "^6.24.1",
     "babelify": "^7.3.0",
     "browserify": "^14.4.0",
-    "browserify-css": "^0.11.1",
-    "css-loader": "^0.28.4",
+    "browserify-css": "^0.15.0",
+    "css-loader": "^3.0.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.19.1",
     "eslint-config-react": "^1.1.7",
     "eslint-plugin-babel": "^5.0.0",
     "eslint-plugin-react": "^7.7.0",
-    "jest": "^22.4.3",
+    "jest": "^24.8.0",
     "nodemon": "^1.11.0",
     "prettier-eslint-cli": "^4.7.1",
     "react": "^16.3.1",
     "react-dom": "^16.4.0",
     "style-loader": "^0.18.2",
-    "url-loader": "^0.5.9"
+    "url-loader": "^2.0.1"
   }
 }
