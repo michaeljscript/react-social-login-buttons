@@ -218,6 +218,9 @@ I welcome issues and pull requests on https://github.com/MichalSzorad/react-soci
 
 ## Versions
 
+##### version 3.0.0
+- Use button elements instead of a div
+
 ##### version 2.3.0
 - Add support for styled-components
 
