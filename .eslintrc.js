@@ -15,16 +15,7 @@ module.exports = {
         functions: "always-multiline",
       },
     ],
-    quotes: ["warn", "double"],
-    "sort-keys": ["warn", "asc", { natural: true }],
-    "sort-imports": [
-      "warn",
-      {
-        ignoreCase: false,
-        ignoreMemberSort: false,
-        memberSyntaxSortOrder: ["none", "all", "single", "multiple"],
-      },
-    ],
+    quotes: ["warn", "single"],
     "babel/semi": 1,
     "object-shorthand": ["warn", "always"],
     "no-alert": "off",

@@ -1,5 +1,5 @@
-import React from "react";
-import SocialLoginButton from "./SocialLoginButton";
+import React from 'react';
+import SocialLoginButton from './SocialLoginButton';
 
 const createButton = config => props => {
   const finalProps = {
