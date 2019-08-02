@@ -1,4 +1,4 @@
-import { Component, ComponentClass } from "react"
+import * as React from "react"
 
 interface SpecificSocialLoginButtonProps {
   onClick?: () => any
@@ -12,7 +12,7 @@ interface SpecificSocialLoginButtonProps {
   className?: string
 
   /** Icon will be used. Can be a react component or a string. If string provided, will render an <i> element, see `iconFormat`. */
-  icon?: string | Component | Function
+  icon?: string | React.Component | Function
 
   /** If icon is a string, then will render an <i> element with the classname returned from this function. */
   iconFormat?: (iconName: string) => string
@@ -33,7 +33,7 @@ interface SpecificSocialLoginButtonProps {
   text?: string
 }
 
-declare class SpecificSocialLoginButton extends Component<SpecificSocialLoginButtonProps, any> { }
+declare class SpecificSocialLoginButton extends React.Component<SpecificSocialLoginButtonProps, any> { }
 
 declare class FacebookLoginButton extends SpecificSocialLoginButton { }
 declare class GoogleLoginButton extends SpecificSocialLoginButton { }

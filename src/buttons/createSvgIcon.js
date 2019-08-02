@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 // eslint-disable-next-line
 const createSvgIcon = Component => ({ size }) => <Component width={size} height={size} />;

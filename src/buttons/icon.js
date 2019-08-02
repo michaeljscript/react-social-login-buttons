@@ -1,5 +1,5 @@
-import React from "react";
-import T from "prop-types";
+import React from 'react';
+import T from 'prop-types';
 
 const Icon = ({ name, size, format }) => {
   return <i className={format(name)} style={{ fontSize: size }} />;

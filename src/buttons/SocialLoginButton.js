@@ -1,26 +1,35 @@
-import DynamicIcon from "./DynamicIcon";
-import T from "prop-types";
-import React, { Component } from "react";
+import T from 'prop-types';
+import React, { Component } from 'react';
+import DynamicIcon from './DynamicIcon';
 
 export default class SocialLoginButton extends Component {
-  state = { hovered: false };
+  state = { focused: false, hovered: false };
 
   handleMouseEnter = () => {
     this.setState({ hovered: true });
-    if (typeof this.props.onMouseEnter === "function") {
+    if (typeof this.props.onMouseEnter === 'function') {
       this.props.onMouseEnter();
     }
   };
 
   handleMouseLeave = () => {
     this.setState({ hovered: false });
-    if (typeof this.props.onMouseLeave === "function") {
+    if (typeof this.props.onMouseLeave === 'function') {
       this.props.onMouseLeave();
     }
   };
 
+  handleFocus = () => {
+    this.setState({ focused: true });
+  };
+
+  handleBlur = () => {
+    this.setState({ focused: false });
+  };
+
+
   handleClick = () => {
-    if (typeof this.props.onClick === "function") {
+    if (typeof this.props.onClick === 'function') {
       this.props.onClick();
     }
   };
@@ -39,45 +48,47 @@ export default class SocialLoginButton extends Component {
       size,
       style: customStyle,
     } = this.props;
-    const { hovered } = this.state;
+    const { focused, hovered } = this.state;
 
     const buttonStyles = computeButtonStyles(styles.button, {
       activeStyle: preventActiveStyles ? customStyle : activeStyle,
       customStyle,
-      hovered,
+      active: hovered || focused,
       size,
     });
 
     return (
-      <div
+      <button
         style={buttonStyles}
         onClick={this.handleClick}
         onMouseEnter={this.handleMouseEnter}
         onMouseLeave={this.handleMouseLeave}
+        onFocus={this.handleFocus}
+        onBlur={this.handleBlur}
         {...{ className }}
       >
         <div style={styles.flex}>
-          <div style={{ display: "flex", justifyContent: "center", minWidth: iconSize }}>
+          <div style={{ display: 'flex', justifyContent: 'center', minWidth: iconSize }}>
             <DynamicIcon type={icon} size={iconSize} format={iconFormat} />
           </div>
           <div style={styles.divider} />
-          <div style={{ textAlign: align, width: "100%" }}>{children}</div>
+          <div style={{ textAlign: align, width: '100%' }}>{children}</div>
         </div>
-      </div>
+      </button>
     );
   }
 }
 
-const computeButtonStyles = (defaults, { size, customStyle, hovered, activeStyle }) => ({
+const computeButtonStyles = (defaults, { size, customStyle, active, activeStyle }) => ({
   ...defaults,
   height: size,
   ...customStyle,
-  ...(hovered && activeStyle),
+  ...(active && activeStyle),
 });
 
 SocialLoginButton.propTypes = {
   activeStyle: T.object,
-  align: T.oneOf(["left", "right", "center"]),
+  align: T.oneOf(['left', 'right', 'center']),
   children: T.node,
   className: T.string,
   icon: T.oneOfType([T.string, T.node, T.func]),
@@ -93,30 +104,33 @@ SocialLoginButton.propTypes = {
 };
 
 SocialLoginButton.defaultProps = {
-  align: "left",
-  iconSize: "26px",
+  align: 'left',
+  iconSize: '26px',
   preventActiveStyles: false,
-  size: "50px",
+  size: '50px',
 };
 
 const styles = {
   button: {
+    display: 'block',
+    border: 0,
     borderRadius: 3,
-    boxShadow: "rgba(0, 0, 0, 0.5) 0 1px 2px",
-    color: "#ffffff",
-    cursor: "pointer",
-    fontSize: "19px",
-    margin: 5,
-    overflow: "hidden",
-    padding: "0 10px",
-    userSelect: "none",
+    boxShadow: 'rgba(0, 0, 0, 0.5) 0 1px 2px',
+    color: '#ffffff',
+    cursor: 'pointer',
+    fontSize: '19px',
+    margin: '5px',
+    width: 'calc(100% - 10px)',
+    overflow: 'hidden',
+    padding: '0 10px',
+    userSelect: 'none',
   },
   divider: {
-    width: "10px",
+    width: '10px',
   },
   flex: {
-    alignItems: "center",
-    display: "flex",
-    height: "100%",
+    alignItems: 'center',
+    display: 'flex',
+    height: '100%',
   },
 };
