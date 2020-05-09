@@ -1,36 +1,40 @@
+// eslint-disable
 import * as React from "react"
 
 interface SpecificSocialLoginButtonProps {
-  onClick?: () => any
-  onMouseEnter?: () => any
-  onMouseLeave?: () => any
+  onClick?: () => any;
+  onMouseEnter?: () => any;
+  onMouseLeave?: () => any;
 
   /** This style will be used when an user hovers above the button. */
-  activeStyle?: object
+  activeStyle?: object;
 
   /** Root element will have this className */
-  className?: string
+  className?: string;
 
   /** Icon will be used. Can be a react component or a string. If string provided, will render an <i> element, see `iconFormat`. */
-  icon?: string | React.Component | Function
+  icon?: string | React.Component | Function;
 
   /** If icon is a string, then will render an <i> element with the classname returned from this function. */
-  iconFormat?: (iconName: string) => string
+  iconFormat?: (iconName: string) => string;
 
   /** The size of icon e.g. "26px". */
-  iconSize?: string
+  iconSize?: string;
+
+  /** Color of the icon - default is #FFFFFF */
+  iconColor?: string;
 
   /** If true, active styles wont apply. You can use your logic and compute custom styles by passing an object to `style` param. */
-  preventActiveStyles?: Boolean
+  preventActiveStyles?: Boolean;
 
   /** Override default button styles. */
-  style?: object
+  style?: object;
 
   /** Align of the button text. */
-  align?: "left" | "center" | "right"
+  align?: "left" | "center" | "right";
 
   /** Text will be displayed */
-  text?: string
+  text?: string;
 }
 
 declare class SpecificSocialLoginButton extends React.Component<SpecificSocialLoginButtonProps, any> { }
@@ -45,8 +49,8 @@ declare class LinkedInLoginButton extends SpecificSocialLoginButton { }
 declare class MicrosoftLoginButton extends SpecificSocialLoginButton { }
 declare class BufferLoginButton extends SpecificSocialLoginButton { }
 
-declare const createButton: (props: SpecificSocialLoginButtonProps) => ComponentClass<SpecificSocialLoginButtonProps>
-declare const createSvgIcon: <T extends Function>(Component: T) => (props: { size: string | number }) => T
+declare const createButton: (props: SpecificSocialLoginButtonProps) => React.ComponentClass<SpecificSocialLoginButtonProps>;
+declare const createSvgIcon: <T extends Function>(Component: T) => (props: { size: string | number }) => T;
 
 export {
   FacebookLoginButton,

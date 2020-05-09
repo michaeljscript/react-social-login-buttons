@@ -2,37 +2,43 @@ import T from 'prop-types';
 import React, { Component } from 'react';
 import DynamicIcon from './DynamicIcon';
 
+const DEFAULT_ICON_COLOR = '#FFFFFF';
+
 export default class SocialLoginButton extends Component {
-  state = { focused: false, hovered: false };
+  constructor (props) {
+    super(props);
+    this.state = { focused: false, hovered: false };
 
-  handleMouseEnter = () => {
-    this.setState({ hovered: true });
-    if (typeof this.props.onMouseEnter === 'function') {
-      this.props.onMouseEnter();
-    }
-  };
+    this.handleMouseEnter = () => {
+      this.setState({ hovered: true });
+      if (typeof this.props.onMouseEnter === 'function') {
+        this.props.onMouseEnter();
+      }
+    };
 
-  handleMouseLeave = () => {
-    this.setState({ hovered: false });
-    if (typeof this.props.onMouseLeave === 'function') {
-      this.props.onMouseLeave();
-    }
-  };
+    this.handleMouseLeave = () => {
+      this.setState({ hovered: false });
+      if (typeof this.props.onMouseLeave === 'function') {
+        this.props.onMouseLeave();
+      }
+    };
 
-  handleFocus = () => {
-    this.setState({ focused: true });
-  };
+    this.handleFocus = () => {
+      this.setState({ focused: true });
+    };
 
-  handleBlur = () => {
-    this.setState({ focused: false });
-  };
+    this.handleBlur = () => {
+      this.setState({ focused: false });
+    };
 
 
-  handleClick = () => {
-    if (typeof this.props.onClick === 'function') {
-      this.props.onClick();
-    }
-  };
+    this.handleClick = () => {
+      if (typeof this.props.onClick === 'function') {
+        this.props.onClick();
+      }
+    };
+  }
+
 
   render () {
     const {
@@ -44,6 +50,7 @@ export default class SocialLoginButton extends Component {
       icon,
       iconFormat,
       iconSize,
+      iconColor = DEFAULT_ICON_COLOR,
       preventActiveStyles,
       size,
       style: customStyle,
@@ -69,7 +76,7 @@ export default class SocialLoginButton extends Component {
       >
         <div style={styles.flex}>
           <div style={{ display: 'flex', justifyContent: 'center', minWidth: iconSize }}>
-            <DynamicIcon type={icon} size={iconSize} format={iconFormat} />
+            <DynamicIcon type={icon} size={iconSize} format={iconFormat} color={iconColor} />
           </div>
           <div style={styles.divider} />
           <div style={{ textAlign: align, width: '100%' }}>{children}</div>

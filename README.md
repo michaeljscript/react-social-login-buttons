@@ -186,6 +186,10 @@ If you pass a string, `<i className={format(name)}/>` will be rendered.
 
 Icon will have this size. Eg. "26px"
 
+### `iconColor` {String} (optional)
+
+Icon will have this color - default #FFFFFF
+
 ### `size` {String} (optional)
 
 Box will have this size. Eg. "150px"
@@ -217,6 +221,9 @@ react-social-login-buttons is focused on speed and simplicity.
 I welcome issues and pull requests on https://github.com/MichalSzorad/react-social-login-buttons
 
 ## Versions
+
+##### version 3.1.0
+- Add support for icon color
 
 ##### version 3.0.0
 - Use button elements instead of a div
