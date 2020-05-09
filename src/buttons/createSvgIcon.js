@@ -1,7 +1,7 @@
 import React from 'react';
 
 // eslint-disable-next-line
-const createSvgIcon = Component => ({ size }) => {
+const createSvgIcon = Component => ({ size, color }) => {
 
   // URL has been given
   if (typeof Component === 'string') {
@@ -10,7 +10,7 @@ const createSvgIcon = Component => ({ size }) => {
     }
     return createSvgIcon(Image);
   }
-  return <Component width={size} height={size} />;
+  return <Component width={size} height={size} color={color} />;
 };
 
 export default createSvgIcon;

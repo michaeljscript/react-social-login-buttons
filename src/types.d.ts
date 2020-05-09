@@ -21,6 +21,9 @@ interface SpecificSocialLoginButtonProps {
   /** The size of icon e.g. "26px". */
   iconSize?: string;
 
+  /** Color of the icon - default is #FFFFFF */
+  iconColor?: string;
+
   /** If true, active styles wont apply. You can use your logic and compute custom styles by passing an object to `style` param. */
   preventActiveStyles?: Boolean;
 

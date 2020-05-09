@@ -2,6 +2,8 @@ import T from 'prop-types';
 import React, { Component } from 'react';
 import DynamicIcon from './DynamicIcon';
 
+const DEFAULT_ICON_COLOR = '#FFFFFF';
+
 export default class SocialLoginButton extends Component {
   constructor (props) {
     super(props);
@@ -48,6 +50,7 @@ export default class SocialLoginButton extends Component {
       icon,
       iconFormat,
       iconSize,
+      iconColor = DEFAULT_ICON_COLOR,
       preventActiveStyles,
       size,
       style: customStyle,
@@ -73,7 +76,7 @@ export default class SocialLoginButton extends Component {
       >
         <div style={styles.flex}>
           <div style={{ display: 'flex', justifyContent: 'center', minWidth: iconSize }}>
-            <DynamicIcon type={icon} size={iconSize} format={iconFormat} />
+            <DynamicIcon type={icon} size={iconSize} format={iconFormat} color={iconColor} />
           </div>
           <div style={styles.divider} />
           <div style={{ textAlign: align, width: '100%' }}>{children}</div>
