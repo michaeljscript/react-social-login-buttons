@@ -1,11 +1,12 @@
 language: node_js
 node_js:
   - "10"
+  - "12"
 
 cache:
   directories:
     - "node_modules"
 
 script:
-  - yarn test
-  - yarn run test:lint
+  - npm test
+  - npm run test:lint

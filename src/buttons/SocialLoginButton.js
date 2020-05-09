@@ -3,36 +3,40 @@ import React, { Component } from 'react';
 import DynamicIcon from './DynamicIcon';
 
 export default class SocialLoginButton extends Component {
-  state = { focused: false, hovered: false };
+  constructor (props) {
+    super(props);
+    this.state = { focused: false, hovered: false };
 
-  handleMouseEnter = () => {
-    this.setState({ hovered: true });
-    if (typeof this.props.onMouseEnter === 'function') {
-      this.props.onMouseEnter();
-    }
-  };
+    this.handleMouseEnter = () => {
+      this.setState({ hovered: true });
+      if (typeof this.props.onMouseEnter === 'function') {
+        this.props.onMouseEnter();
+      }
+    };
 
-  handleMouseLeave = () => {
-    this.setState({ hovered: false });
-    if (typeof this.props.onMouseLeave === 'function') {
-      this.props.onMouseLeave();
-    }
-  };
+    this.handleMouseLeave = () => {
+      this.setState({ hovered: false });
+      if (typeof this.props.onMouseLeave === 'function') {
+        this.props.onMouseLeave();
+      }
+    };
 
-  handleFocus = () => {
-    this.setState({ focused: true });
-  };
+    this.handleFocus = () => {
+      this.setState({ focused: true });
+    };
 
-  handleBlur = () => {
-    this.setState({ focused: false });
-  };
+    this.handleBlur = () => {
+      this.setState({ focused: false });
+    };
 
 
-  handleClick = () => {
-    if (typeof this.props.onClick === 'function') {
-      this.props.onClick();
-    }
-  };
+    this.handleClick = () => {
+      if (typeof this.props.onClick === 'function') {
+        this.props.onClick();
+      }
+    };
+  }
+
 
   render () {
     const {
