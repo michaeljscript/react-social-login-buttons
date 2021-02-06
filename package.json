@@ -37,7 +37,7 @@
   "homepage": "https://github.com/MichalSzorad/react-social-login-buttons#readme",
   "dependencies": {},
   "peerDependencies": {
-    "react": "^15.0.0 || ^16.0.0"
+    "react": "^15.0.0 || ^17.x"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
