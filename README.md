@@ -111,6 +111,12 @@ We currently support just a few login buttons. Others will be implemented later.
 <BufferLoginButton onClick={() => alert("Hello")} />
 ```
 
+#### TelegramLoginButton
+
+```jsx
+<TelegramLoginButton onClick={() => alert("Hello")} />
+```
+
 ## Create your own button
 
 You can create your own button.
