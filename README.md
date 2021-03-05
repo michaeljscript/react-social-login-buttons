@@ -117,6 +117,12 @@ We currently support just a few login buttons. Others will be implemented later.
 <TelegramLoginButton onClick={() => alert("Hello")} />
 ```
 
+#### AppleLoginButton
+
+```jsx
+<TelegramLoginButton onClick={() => alert("Hello")} />
+```
+
 ## Create your own button
 
 You can create your own button.
