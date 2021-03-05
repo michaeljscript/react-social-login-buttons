@@ -23,8 +23,8 @@ function Icon({ width, height, color }) {
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width={width} height={height} style={{ transform: 'scale(1.5)' }}>
       <defs>
         <linearGradient id="b" x1=".66" x2=".851" y1=".437" y2=".802">
-          <stop offset="0" stop-color="#eff7fc" />
-          <stop offset="1" stop-color="#fff" />
+          <stop offset="0" stopColor="#eff7fc" />
+          <stop offset="1" stopColor="#fff" />
         </linearGradient>
       </defs>
       <circle cx="120" cy="120" r="120" fill="url(#a)" />
