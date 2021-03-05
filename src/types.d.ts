@@ -49,6 +49,7 @@ declare class LinkedInLoginButton extends SpecificSocialLoginButton { }
 declare class MicrosoftLoginButton extends SpecificSocialLoginButton { }
 declare class BufferLoginButton extends SpecificSocialLoginButton { }
 declare class TelegramLoginButton extends SpecificSocialLoginButton { }
+declare class AppleLoginButton extends SpecificSocialLoginButton { }
 
 
 declare const createButton: (props: SpecificSocialLoginButtonProps) => React.ComponentClass<SpecificSocialLoginButtonProps>;
@@ -65,6 +66,7 @@ export {
   MicrosoftLoginButton,
   BufferLoginButton,
   TelegramLoginButton,
+  AppleLoginButton,
   createButton,
   createSvgIcon,
 }
