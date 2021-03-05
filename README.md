@@ -39,7 +39,7 @@ import FacebookLoginButton from "react-social-login-buttons/lib/buttons/Facebook
 
 ## Usage
 
-Default button content - "Login with Facebook"
+Default button content - "Log in with Facebook"
 
 ```jsx
 <FacebookLoginButton onClick={() => alert("Hello")} />
@@ -126,7 +126,7 @@ import React from "react";
 import {createButton} from "react-social-login-buttons";
 
 const config = {
-  text: "Login with Facebook",
+  text: "Log in with Facebook",
   icon: "facebook",
   iconFormat: name => `fa fa-${name}`,
   style: { background: "#3b5998" },
@@ -144,7 +144,7 @@ import svgIcon from "./my-svg.svg";
 import {createSvgIcon} from "react-social-login-buttons";
 
 const config = {
-  text: "Login with Facebook",
+  text: "Log in with Facebook",
   icon: createSvgIcon(svgIcon),
   iconFormat: name => `fa fa-${name}`,
   style: { background: "#3b5998" },

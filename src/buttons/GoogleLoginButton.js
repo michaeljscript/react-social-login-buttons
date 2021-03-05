@@ -7,7 +7,7 @@ const config = {
   activeStyle: { background: '#EFF0EE' },
   icon: createSvgIcon(Icon),
   style: { background: 'white', color: 'black' },
-  text: 'Login with Google',
+  text: 'Log in with Google',
 };
 
 const GoogleLoginButton = createButton(config);

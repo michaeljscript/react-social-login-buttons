@@ -23,7 +23,7 @@ storiesOf("Social login buttons", module)
       icon: 'facebook',
       iconFormat: name => `fa fa-${name}`,
       style: { background: '#3b5998' },
-      text: 'Login with Facebook',
+      text: 'Log in with Facebook',
     };
     /** My Facebook login button. */
     const MyFacebookLoginButton = createButton(config);
