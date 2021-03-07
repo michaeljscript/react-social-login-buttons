@@ -7,7 +7,7 @@ A simple package to display social login buttons using React.
 Buttons do not provide any social logic.
 They are only visual components listening to some events triggered by the user.
 
-![Social login buttons](https://raw.githubusercontent.com/MichalSzorad/react-social-login-buttons/master/examples/simple/example2.png)
+![Social login buttons](https://raw.githubusercontent.com/MichalSzorad/react-social-login-buttons/master/examples/simple/example.png)
 
 ## Install
 
@@ -123,6 +123,12 @@ We currently support just a few login buttons. Others will be implemented later.
 <AppleLoginButton onClick={() => alert("Hello")} />
 ```
 
+#### DiscordLoginButton
+
+```jsx
+<DiscordLoginButton onClick={() => alert("Hello")} />
+```
+
 ## Create your own button
 
 You can create your own button.
@@ -231,76 +237,6 @@ react-social-login-buttons is focused on speed and simplicity.
 ## Contribution
 
 I welcome issues and pull requests on https://github.com/MichalSzorad/react-social-login-buttons
-
-## Versions
-
-##### version 3.1.0
-- Add support for icon color
-
-##### version 3.0.0
-- Use button elements instead of a div
-
-##### version 2.3.0
-- Add support for styled-components
-
-##### version 2.2.0
-- Added Buffer login button
-- Exposed createSvgIcon util
-
-##### version 2.1.2
-- Added TypeScript definition for createButton util
-- Deprecate optimized imports
-
-##### version 2.1.1
-- Fixed TypeScript definitions
-
-##### version 2.1.0
-
-- Add TypeScript definitions
-- Add Travis CI
-
-##### version 2.0.1
-
-- Fixed importing
-
-##### version 2.0.0
-
-- Using flexbox instad of floating styles
-- Using SVGs for smaller build sizes
-- Easier api for development
-- Removed SocialLoginButtonProvider
-- Using createButton util to create buttons
-- onMouseEnter, onMouseLeave handlers
-- preventActiveStyles for easier styling
-
-##### version 1.3.5
-
-- Change react version
-
-##### version 1.3.4
-
-- Fix package.json error
-
-##### version 1.3.3
-
-- Removed react from dependency
-
-##### version 1.3.1
-
-- Fixed README.md syntax highlighting
-
-##### version 1.3.0
-
-- Allowed to pass children into `SocialLoginButton`
-
-##### version 1.2.1
-
-- Fixed a bug when react-social-login-buttons don't compile
-
-##### version 1.2.0
-
-- Added new buttons for: Instagram, LinkedIn, Microsoft
-- New development api - SocialLoginButtonProvider
 
 ## Thanks
 
