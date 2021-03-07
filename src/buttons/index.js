@@ -9,5 +9,6 @@ export { default as MicrosoftLoginButton } from './MicrosoftLoginButton';
 export { default as BufferLoginButton } from './BufferLoginButton';
 export { default as TelegramLoginButton } from './TelegramLoginButton';
 export { default as AppleLoginButton } from './AppleLoginButton';
+export { default as DiscordLoginButton } from './DiscordLoginButton';
 export { default as createButton } from './create-button';
 export { default as createSvgIcon } from './createSvgIcon';

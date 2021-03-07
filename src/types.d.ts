@@ -50,6 +50,7 @@ declare class MicrosoftLoginButton extends SpecificSocialLoginButton { }
 declare class BufferLoginButton extends SpecificSocialLoginButton { }
 declare class TelegramLoginButton extends SpecificSocialLoginButton { }
 declare class AppleLoginButton extends SpecificSocialLoginButton { }
+declare class DiscordLoginButton extends SpecificSocialLoginButton {}
 
 
 declare const createButton: (props: SpecificSocialLoginButtonProps) => React.ComponentClass<SpecificSocialLoginButtonProps>;
@@ -67,6 +68,7 @@ export {
   BufferLoginButton,
   TelegramLoginButton,
   AppleLoginButton,
+  DiscordLoginButton,
   createButton,
   createSvgIcon,
 }
