@@ -66,6 +66,7 @@ export default class SocialLoginButton extends Component {
 
     return (
       <button
+        type="button"
         style={buttonStyles}
         onClick={this.handleClick}
         onMouseEnter={this.handleMouseEnter}
