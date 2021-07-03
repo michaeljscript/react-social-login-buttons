@@ -38,6 +38,8 @@
     "microsoft",
     "telegram",
     "twitter",
+    "slack",
+    "okta",
     "react-social-login-buttons"
   ],
   "author": "Michal Szorad, miso.szorad@gmail.com",
