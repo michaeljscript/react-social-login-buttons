@@ -129,6 +129,18 @@ We currently support just a few login buttons. Others will be implemented later.
 <DiscordLoginButton onClick={() => alert("Hello")} />
 ```
 
+## SlackLoginButton
+
+```jsx
+<SlackLoginButton onClick={() => alert('Hello')} />
+```
+
+### OktaLoginButton
+
+```jsx
+<OktaLoginButton onClick={() => alert('Hello')} />
+```
+
 ## Create your own button
 
 You can create your own button.
