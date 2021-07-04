@@ -8,7 +8,7 @@ const config = {
   activeStyle: { background: "#f5f5f5" },
   icon: createSvgIcon(Icon),
   style: { background: 'white', color: 'black' },
-  text: 'Login with Okta',
+  text: 'Log in with Okta',
 };
 
 const OktaLoginButton = createButton(config);

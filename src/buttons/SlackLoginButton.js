@@ -7,14 +7,14 @@ const config = {
   activeStyle: { background: '#f5f5f5' },
   icon: createSvgIcon(Icon),
   style: { background: 'white', color: 'black' },
-  text: 'Login with Slack',
+  text: 'Log in with Slack',
 };
 
 const SlackLoginButton = createButton(config);
 
 export default SlackLoginButton;
 
-function Icon ({ width = 24, height = 24, color }) {
+function Icon({ width = 24, height = 24, color }) {
   return (
     <svg
       enableBackground="new 0 0 2447.6 2452.5"
