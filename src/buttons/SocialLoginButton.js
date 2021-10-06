@@ -32,9 +32,9 @@ export default class SocialLoginButton extends Component {
     };
 
 
-    this.handleClick = () => {
+    this.handleClick = (e) => {
       if (typeof this.props.onClick === 'function') {
-        this.props.onClick();
+        this.props.onClick(e);
       }
     };
   }
