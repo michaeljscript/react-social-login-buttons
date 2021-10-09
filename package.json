@@ -1,6 +1,6 @@
 {
   "name": "react-social-login-buttons",
-  "version": "3.5.1",
+  "version": "3.6.0",
   "description": "Simple social login buttons for React",
   "main": "./dist/index.js",
   "types": "./src/types.d.ts",
@@ -40,6 +40,7 @@
     "twitter",
     "slack",
     "okta",
+    "Yahoo",
     "react-social-login-buttons"
   ],
   "author": "Michal Szorad, miso.szorad@gmail.com",

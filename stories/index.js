@@ -4,14 +4,11 @@ import React from 'react';
 import createButton from '../src/buttons/create-button';
 import { storiesOf } from '@storybook/react';
 
-const renderAllButtons = buttons => (
-  <div>{Object.values(buttons).map((Button, i) => <Button key={i} onClick={() => alert('hello')} />)}</div>
-);
 
 //eslint-disable-next-line
 storiesOf("Social login buttons", module)
   .addDecorator(story => <div style={{ fontFamily: 'sans-serif' }}>{story()}</div>)
-  .add('All buttons', () => renderAllButtons(buttons))
+  .add('All buttons', () => <AllButtons />)
   .add('With custom content', () => (
     <FacebookLoginButton>
       <span>Custom text</span>
@@ -29,3 +26,11 @@ storiesOf("Social login buttons", module)
     const MyFacebookLoginButton = createButton(config);
     return <MyFacebookLoginButton>Hello</MyFacebookLoginButton>;
   });
+
+
+function AllButtons() {
+  const components = Object.values(buttons);
+  return <div style={{ display: 'flex', flexWrap: 'wrap' }}>{components.map((Button, i) => <div key={i} style={{ width: '30%' }}>
+    <Button onClick={() => alert('hello')} />
+  </div>)}</div>
+}

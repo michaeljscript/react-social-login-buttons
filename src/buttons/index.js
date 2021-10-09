@@ -12,5 +12,6 @@ export { default as AppleLoginButton } from './AppleLoginButton';
 export { default as DiscordLoginButton } from './DiscordLoginButton';
 export { default as OktaLoginButton } from './OktaLoginButton';
 export { default as SlackLoginButton } from './SlackLoginButton';
+export { default as YahooLoginButton } from './YahooLoginButton';
 export { default as createButton } from './create-button';
 export { default as createSvgIcon } from './createSvgIcon';

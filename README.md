@@ -7,7 +7,7 @@ A simple package to display social login buttons using React.
 Buttons do not provide any social logic.
 They are only visual components listening to some events triggered by the user.
 
-![Social login buttons](https://raw.githubusercontent.com/MichalSzorad/react-social-login-buttons/master/examples/simple/example.png)
+![Social login buttons](https://raw.githubusercontent.com/MichalSzorad/react-social-login-buttons/develop/examples/simple/screenshot2.png)
 
 ## Install
 
@@ -139,6 +139,12 @@ We currently support just a few login buttons. Others will be implemented later.
 
 ```jsx
 <OktaLoginButton onClick={() => alert('Hello')} />
+```
+
+### YahooLoginButton
+
+```jsx
+<YahooLoginButton onClick={() => alert('Hello')} />
 ```
 
 ## Create your own button
