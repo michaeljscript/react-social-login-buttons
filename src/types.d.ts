@@ -43,6 +43,7 @@ declare class FacebookLoginButton extends SpecificSocialLoginButton { }
 declare class GoogleLoginButton extends SpecificSocialLoginButton { }
 declare class GithubLoginButton extends SpecificSocialLoginButton { }
 declare class TwitterLoginButton extends SpecificSocialLoginButton { }
+declare class YahooLoginButton extends SpecificSocialLoginButton { }
 declare class AmazonLoginButton extends SpecificSocialLoginButton { }
 declare class InstagramLoginButton extends SpecificSocialLoginButton { }
 declare class LinkedInLoginButton extends SpecificSocialLoginButton { }
@@ -63,6 +64,7 @@ export {
   GoogleLoginButton,
   GithubLoginButton,
   TwitterLoginButton,
+  YahooLoginButton,
   AmazonLoginButton,
   InstagramLoginButton,
   LinkedInLoginButton,
