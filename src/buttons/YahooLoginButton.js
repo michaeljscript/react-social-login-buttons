@@ -15,7 +15,7 @@ const YahooLoginButton = createButton(config);
 export default YahooLoginButton;
 
 function Icon({ width, height, color }) {
-  return <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+  return <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width={width} height={height} xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
   viewBox="0 0 291.319 291.319" style="enable-background:new 0 0 291.319 291.319;" xml:space="preserve">
 <g>
  <path style="fill:#720E9E;" d="M145.659,0c80.45,0,145.66,65.219,145.66,145.66c0,80.45-65.21,145.659-145.66,145.659
