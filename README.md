@@ -258,7 +258,8 @@ I welcome issues and pull requests on https://github.com/MichalSzorad/react-soci
 
 ## Thanks
 
-Special thanks to people creating awesome svg icons
+Special thanks to people creating awesome svg icons and teams
+- [Dinirio](https://www.dinirio.com)
 
 - [SimpleIcon](https://www.flaticon.com/authors/simpleicon)
 
