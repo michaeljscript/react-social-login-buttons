@@ -21,6 +21,9 @@ interface SpecificSocialLoginButtonProps {
   /** The size of icon e.g. "26px". */
   iconSize?: string;
 
+  /** The size of box e.g. "150px". */
+  size?: string;
+
   /** Color of the icon - default is #FFFFFF */
   iconColor?: string;
 
