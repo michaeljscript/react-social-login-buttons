@@ -17,7 +17,7 @@ const config = {
 const InstagramLoginButton = createButton(config);
 export default InstagramLoginButton;
 
-function Icon({ width, height, color }) {
+function Icon ({ width, height, color }) {
   return (<svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 169.063 169.063">
     <g fill={color}>
       <path d="M122.406,0H46.654C20.929,0,0,20.93,0,46.655v75.752c0,25.726,20.929,46.655,46.654,46.655h75.752   c25.727,0,46.656-20.93,46.656-46.655V46.655C169.063,20.93,148.133,0,122.406,0z M154.063,122.407   c0,17.455-14.201,31.655-31.656,31.655H46.654C29.2,154.063,15,139.862,15,122.407V46.655C15,29.201,29.2,15,46.654,15h75.752   c17.455,0,31.656,14.201,31.656,31.655V122.407z" />
