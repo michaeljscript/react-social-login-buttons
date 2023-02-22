@@ -196,6 +196,10 @@ Props for every Button
 
 Will be triggered when clicked on the button.
 
+### `disabled` {Boolean} (optional)
+
+Disables (or enables the button)
+
 ### `style` {Object} (optional)
 
 Custom button styles
@@ -263,7 +267,7 @@ Special thanks to people creating awesome svg icons and teams
 
 - [SimpleIcon](https://www.flaticon.com/authors/simpleicon)
 
-- [Simple Icons](https://github.com/simple-icons/simple-icons) 
+- [Simple Icons](https://github.com/simple-icons/simple-icons)
 
 - [iconmonstr](https://iconmonstr.com/amazon-1-svg/)
 

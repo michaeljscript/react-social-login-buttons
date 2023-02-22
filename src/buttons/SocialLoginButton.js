@@ -54,6 +54,7 @@ export default class SocialLoginButton extends Component {
       preventActiveStyles,
       size,
       style: customStyle,
+      disabled,
     } = this.props;
     const { focused, hovered } = this.state;
 
@@ -74,6 +75,7 @@ export default class SocialLoginButton extends Component {
         onFocus={this.handleFocus}
         onBlur={this.handleBlur}
         {...{ className }}
+        disabled={disabled}
       >
         <div style={styles.flex}>
           <div style={{ display: 'flex', justifyContent: 'center', minWidth: iconSize }}>
@@ -102,6 +104,7 @@ SocialLoginButton.propTypes = {
   icon: T.oneOfType([T.string, T.node, T.func]),
   iconFormat: T.func,
   iconSize: T.string,
+  iconColor: T.string,
   onClick: T.func,
   onMouseEnter: T.func,
   onMouseLeave: T.func,
@@ -109,6 +112,7 @@ SocialLoginButton.propTypes = {
   size: T.string,
   style: T.object,
   text: T.string,
+  disabled: T.bool,
 };
 
 SocialLoginButton.defaultProps = {
