@@ -1,7 +1,7 @@
 // eslint-disable
 import * as React from "react"
 
-interface SpecificSocialLoginButtonProps {
+export interface SpecificSocialLoginButtonProps {
   onClick?: () => any;
   onMouseEnter?: () => any;
   onMouseLeave?: () => any;
@@ -38,6 +38,9 @@ interface SpecificSocialLoginButtonProps {
 
   /** Text will be displayed */
   text?: string;
+
+  /** Button is disabled */
+  disabled?: boolean;
 }
 
 declare class SpecificSocialLoginButton extends React.Component<SpecificSocialLoginButtonProps, any> { }
