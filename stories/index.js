@@ -14,6 +14,11 @@ storiesOf("Social login buttons", module)
       <span>Custom text</span>
     </FacebookLoginButton>
   ))
+  .add('With no icon', () => (
+    <FacebookLoginButton iconSize={0}>
+      <span>Custom text</span>
+    </FacebookLoginButton>
+  ))
   .add('Custom button', () => {
     const config = {
       activeStyle: { background: '#293e69' },

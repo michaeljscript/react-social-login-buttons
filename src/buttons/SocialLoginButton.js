@@ -78,16 +78,18 @@ export default class SocialLoginButton extends Component {
         disabled={disabled}
       >
         <div style={styles.flex}>
-          <div style={{ display: 'flex', justifyContent: 'center', minWidth: iconSize }}>
+          {!isZeroPx(iconSize) && <div style={{ display: 'flex', justifyContent: 'center', minWidth: iconSize }}>
             <DynamicIcon type={icon} size={iconSize} format={iconFormat} color={iconColor} />
-          </div>
-          <div style={styles.divider} />
+          </div>}
+          {!isZeroPx(iconSize) && <div style={styles.divider} />}
           <div style={{ textAlign: align, width: '100%' }}>{children}</div>
         </div>
       </button>
     );
   }
 }
+
+const isZeroPx = (size) => size === '0' || size === '0px' || size === 0;
 
 const computeButtonStyles = (defaults, { size, customStyle, active, activeStyle }) => ({
   ...defaults,
