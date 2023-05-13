@@ -42,4 +42,14 @@ describe('createButton', () => {
     expect(wrapper.props().style).toBeDefined();
     expect(wrapper.props().activeStyle).toBeDefined();
   });
+
+  it('should pass disabled prop to SocialLoginButton', () => {
+    const Button = createButton({
+      disabled: true,
+    });
+
+    const button = shallow(<Button />);
+
+    expect(button.first().prop('disabled')).toBe(true);
+  });
 });

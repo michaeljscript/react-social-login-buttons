@@ -1,6 +1,6 @@
 import * as buttons from '../src/buttons';
 import { FacebookLoginButton } from '../src';
-import React from 'react';
+import React, { useState } from 'react';
 import createButton from '../src/buttons/create-button';
 import { storiesOf } from '@storybook/react';
 
@@ -25,12 +25,37 @@ storiesOf("Social login buttons", module)
     /** My Facebook login button. */
     const MyFacebookLoginButton = createButton(config);
     return <MyFacebookLoginButton>Hello</MyFacebookLoginButton>;
+  }).add('Disabled button', () => {
+    const [_disabled, setDisabled] = useState(true);
+
+    const config = {
+      activeStyle: { background: '#293e69' },
+      icon: 'facebook',
+      iconFormat: name => `fa fa-${name}`,
+      style: { background: '#3b5998' },
+      text: 'Log in with Facebook',
+      disabled: true,
+      onClick: () => alert('this custom button should be disabled and this should not trigger'),
+    };
+
+    const toggleDisable = () => setDisabled(!_disabled);
+
+    /** My Facebook login button. */
+    const MyFacebookLoginButton = createButton(config);
+
+    return (
+      <>
+        <MyFacebookLoginButton disabled={_disabled}>{_disabled ? 'Disabled' : 'Enabled'}</MyFacebookLoginButton>
+        <hr/>
+        <button onClick={toggleDisable}>Toggle</button>
+      </>
+    );
   });
 
 
-function AllButtons() {
+function AllButtons () {
   const components = Object.values(buttons);
-  return <div style={{ display: 'flex', flexWrap: 'wrap' }}>{components.map((Button, i) => <div key={i} style={{ width: '30%' }}>
+  return (<div style={{ display: 'flex', flexWrap: 'wrap' }}>{components.map((Button, i) => (<div key={i} style={{ width: '30%' }}>
     <Button onClick={() => alert('hello')} />
-  </div>)}</div>
+  </div>))}</div>);
 }

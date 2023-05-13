@@ -147,6 +147,12 @@ We currently support just a few login buttons. Others will be implemented later.
 <YahooLoginButton onClick={() => alert('Hello')} />
 ```
 
+### ZaloLoginButton
+
+```jsx
+<ZaloLoginButton onClick={() => alert('Hello')} />
+```
+
 ## Create your own button
 
 You can create your own button.
@@ -241,6 +247,10 @@ Align the text on the button (default is left).
 ### `preventActiveStyles` {Boolean} (optional) default: false
 
 If set to true, activeStyles won't be used and will be used styles from the style prop.
+
+### `disabled` {Boolean} (optional)
+
+Disables (or enables the button)
 
 ### Events
 
