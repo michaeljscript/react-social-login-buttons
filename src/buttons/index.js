@@ -16,3 +16,4 @@ export { default as YahooLoginButton } from './YahooLoginButton';
 export { default as createButton } from './create-button';
 export { default as createSvgIcon } from './createSvgIcon';
 export { default as ZaloLoginButton } from './ZaloLoginButton';
+export { default as TikTokLoginButton } from './TikTokLoginButton';

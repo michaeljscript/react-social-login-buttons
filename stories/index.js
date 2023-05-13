@@ -54,7 +54,7 @@ storiesOf("Social login buttons", module)
 
 
 function AllButtons () {
-  const components = Object.values(buttons);
+  const components = Object.values(buttons).filter(e => e !== buttons.createButton && e !== buttons.createSvgIcon);
   return (<div style={{ display: 'flex', flexWrap: 'wrap' }}>{components.map((Button, i) => (<div key={i} style={{ width: '30%' }}>
     <Button onClick={() => alert('hello')} />
   </div>))}</div>);
