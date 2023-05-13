@@ -7,7 +7,7 @@ A simple package to display social login buttons using React.
 Buttons do not provide any social logic.
 They are only visual components listening to some events triggered by the user.
 
-![Social login buttons](https://raw.githubusercontent.com/MichalSzorad/react-social-login-buttons/develop/examples/simple/screenshot3.png)
+![Social login buttons](https://raw.githubusercontent.com/MichalSzorad/react-social-login-buttons/develop/examples/simple/screenshot4.png)
 
 ## Install
 
