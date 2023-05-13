@@ -4,9 +4,9 @@ import createButton from './create-button';
 import createSvgIcon from './createSvgIcon';
 
 const config = {
-  activeStyle: { background: 'rgb(0, 137, 255)' },
+  activeStyle: { background: '#555555' },
   icon: createSvgIcon(Icon),
-  style: { background: 'rgb(50, 159, 253)' },
+  style: { background: '#333333' },
   text: 'Log in with Microsoft',
 };
 
@@ -14,11 +14,13 @@ const MicrosoftLoginButton = createButton(config);
 
 export default MicrosoftLoginButton;
 
-function Icon({ width, height, color }) {
-  return (<svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 480 480">
-    <g>
-      <path d="M0.176,224L0.001,67.963l192-26.072V224H0.176z M224.001,37.241L479.937,0v224H224.001V37.241z M479.999,256l-0.062,224   l-255.936-36.008V256H479.999z M192.001,439.918L0.157,413.621L0.147,256h191.854V439.918z" fill={color} />
-    </g>
+function Icon ({ width, height, color }) {
+  return (<svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} fill={color} x="0px" y="0px"
+    viewBox="0 0 48 48">
+    <path fill="#ff5722" d="M6 6H22V22H6z" transform="rotate(-180 14 14)" />
+    <path fill="#4caf50" d="M26 6H42V22H26z" transform="rotate(-180 34 14)" />
+    <path fill="#ffc107" d="M26 26H42V42H26z" transform="rotate(-180 34 34)" />
+    <path fill="#03a9f4" d="M6 26H22V42H6z" transform="rotate(-180 14 34)" />
   </svg>);
 }
 
