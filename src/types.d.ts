@@ -1,7 +1,7 @@
 // eslint-disable
 import * as React from "react"
 
-interface SpecificSocialLoginButtonProps {
+interface SpecificSocialLoginButtonProps extends React.PropsWithChildren {
   onClick?: () => any;
   onMouseEnter?: () => any;
   onMouseLeave?: () => any;
