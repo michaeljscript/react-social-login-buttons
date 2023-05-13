@@ -159,6 +159,12 @@ We currently support just a few login buttons. Others will be implemented later.
 <TikTokLoginButton onClick={() => alert('Hello')} />
 ```
 
+### MetamaskLoginButton
+
+```jsx
+<MetamaskLoginButton onClick={() => alert('Hello')} />
+```
+
 ## Create your own button
 
 You can create your own button.

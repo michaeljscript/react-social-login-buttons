@@ -62,6 +62,7 @@ declare class OktaLoginButton extends SpecificSocialLoginButton { }
 declare class YahooLoginButton extends SpecificSocialLoginButton { }
 declare class ZaloLoginButton extends SpecificSocialLoginButton { }
 declare class TikTokLoginButton extends SpecificSocialLoginButton { }
+declare class MetamaskLoginButton extends SpecificSocialLoginButton { }
 
 
 declare const createButton: (props: SpecificSocialLoginButtonProps) => React.ComponentClass<SpecificSocialLoginButtonProps>;
@@ -85,6 +86,7 @@ export {
   YahooLoginButton,
   ZaloLoginButton,
   TikTokLoginButton,
+  MetamaskLoginButton,
   createButton,
   createSvgIcon,
 }
