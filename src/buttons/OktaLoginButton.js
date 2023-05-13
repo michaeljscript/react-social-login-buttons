@@ -5,7 +5,7 @@ import createSvgIcon from './createSvgIcon';
 
 
 const config = {
-  activeStyle: { background: "#f5f5f5" },
+  activeStyle: { background: '#f5f5f5' },
   icon: createSvgIcon(Icon),
   style: { background: 'white', color: 'black' },
   text: 'Log in with Okta',
@@ -15,7 +15,7 @@ const OktaLoginButton = createButton(config);
 
 export default OktaLoginButton;
 
-function Icon({ width = 24, height = 24 }) {
+function Icon ({ width = 24, height = 24 }) {
   return (
     <svg
       version="1.1"

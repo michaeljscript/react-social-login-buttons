@@ -14,7 +14,7 @@ const SlackLoginButton = createButton(config);
 
 export default SlackLoginButton;
 
-function Icon({ width = 24, height = 24, color }) {
+function Icon ({ width = 24, height = 24, color }) {
   return (
     <svg
       enableBackground="new 0 0 2447.6 2452.5"
