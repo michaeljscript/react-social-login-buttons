@@ -82,6 +82,7 @@ export {
   SlackLoginButton,
   OktaLoginButton,
   YahooLoginButton,
+  ZaloLoginButton,
   createButton,
   createSvgIcon,
 }
