@@ -4,7 +4,7 @@ import createButton from './create-button';
 import createSvgIcon from './createSvgIcon';
 
 const config = {
-  activeStyle: { background: '#3333331c' },
+  activeStyle: { background: '#EFF0EE' },
   icon: createSvgIcon(Icon),
   style: { background: '#FFFFFF', color: '#000000' },
   text: 'Log in with Apple',
