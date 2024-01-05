@@ -31,14 +31,12 @@ export default class SocialLoginButton extends Component {
       this.setState({ focused: false });
     };
 
-
     this.handleClick = (e) => {
       if (typeof this.props.onClick === 'function') {
         this.props.onClick(e);
       }
     };
   }
-
 
   render () {
     const {
@@ -55,6 +53,7 @@ export default class SocialLoginButton extends Component {
       size,
       style: customStyle,
       disabled,
+      type,
     } = this.props;
     const { focused, hovered } = this.state;
 
@@ -67,7 +66,7 @@ export default class SocialLoginButton extends Component {
 
     return (
       <button
-        type="button"
+        type={type}
         style={buttonStyles}
         onClick={this.handleClick}
         onMouseEnter={this.handleMouseEnter}
@@ -78,9 +77,22 @@ export default class SocialLoginButton extends Component {
         disabled={disabled}
       >
         <div style={styles.flex}>
-          {!isZeroPx(iconSize) && <div style={{ display: 'flex', justifyContent: 'center', minWidth: iconSize }}>
-            <DynamicIcon type={icon} size={iconSize} format={iconFormat} color={iconColor} />
-          </div>}
+          {!isZeroPx(iconSize) && (
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                minWidth: iconSize,
+              }}
+            >
+              <DynamicIcon
+                type={icon}
+                size={iconSize}
+                format={iconFormat}
+                color={iconColor}
+              />
+            </div>
+          )}
           {!isZeroPx(iconSize) && <div style={styles.divider} />}
           <div style={{ textAlign: align, width: '100%' }}>{children}</div>
         </div>
@@ -91,7 +103,10 @@ export default class SocialLoginButton extends Component {
 
 const isZeroPx = (size) => size === '0' || size === '0px' || size === 0;
 
-const computeButtonStyles = (defaults, { size, customStyle, active, activeStyle }) => ({
+const computeButtonStyles = (
+  defaults,
+  { size, customStyle, active, activeStyle },
+) => ({
   ...defaults,
   height: size,
   ...customStyle,
@@ -115,6 +130,7 @@ SocialLoginButton.propTypes = {
   style: T.object,
   text: T.string,
   disabled: T.bool,
+  type: T.oneOf(['button', 'submit', 'reset']),
 };
 
 SocialLoginButton.defaultProps = {
@@ -122,6 +138,7 @@ SocialLoginButton.defaultProps = {
   iconSize: '26px',
   preventActiveStyles: false,
   size: '50px',
+  type: 'button',
 };
 
 const styles = {

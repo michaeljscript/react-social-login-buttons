@@ -52,4 +52,20 @@ describe('createButton', () => {
 
     expect(button.first().prop('disabled')).toBe(true);
   });
+
+  it('should pass button type prop to SocialLoginButton', () => {
+    const Button = createButton({});
+
+    const button = shallow(<Button />);
+
+    expect(button.first().prop('type')).toBe('button');
+  });
+
+  it('should pass submit type prop to SocialLoginButton', () => {
+    const Button = createButton({ type: 'submit' });
+
+    const button = shallow(<Button />);
+
+    expect(button.first().prop('type')).toBe('submit');
+  });
 });
