@@ -132,37 +132,37 @@ We currently support just a few login buttons. Others will be implemented later.
 ## SlackLoginButton
 
 ```jsx
-<SlackLoginButton onClick={() => alert('Hello')} />
+<SlackLoginButton onClick={() => alert("Hello")} />
 ```
 
 ### OktaLoginButton
 
 ```jsx
-<OktaLoginButton onClick={() => alert('Hello')} />
+<OktaLoginButton onClick={() => alert("Hello")} />
 ```
 
 ### YahooLoginButton
 
 ```jsx
-<YahooLoginButton onClick={() => alert('Hello')} />
+<YahooLoginButton onClick={() => alert("Hello")} />
 ```
 
 ### ZaloLoginButton
 
 ```jsx
-<ZaloLoginButton onClick={() => alert('Hello')} />
+<ZaloLoginButton onClick={() => alert("Hello")} />
 ```
 
 ### TikTokLoginButton
 
 ```jsx
-<TikTokLoginButton onClick={() => alert('Hello')} />
+<TikTokLoginButton onClick={() => alert("Hello")} />
 ```
 
 ### MetamaskLoginButton
 
 ```jsx
-<MetamaskLoginButton onClick={() => alert('Hello')} />
+<MetamaskLoginButton onClick={() => alert("Hello")} />
 ```
 
 ## Create your own button
@@ -177,14 +177,14 @@ You can also pass a component to the icon prop.
 
 ```js
 import React from "react";
-import {createButton} from "react-social-login-buttons";
+import { createButton } from "react-social-login-buttons";
 
 const config = {
   text: "Log in with Facebook",
   icon: "facebook",
-  iconFormat: name => `fa fa-${name}`,
+  iconFormat: (name) => `fa fa-${name}`,
   style: { background: "#3b5998" },
-  activeStyle: { background: "#293e69" }
+  activeStyle: { background: "#293e69" },
 };
 /** My Facebook login button. */
 const MyFacebookLoginButton = createButton(config);
@@ -193,16 +193,17 @@ export default MyFacebookLoginButton;
 ```
 
 Config can also look like.
+
 ```js
 import svgIcon from "./my-svg.svg";
-import {createSvgIcon} from "react-social-login-buttons";
+import { createSvgIcon } from "react-social-login-buttons";
 
 const config = {
   text: "Log in with Facebook",
   icon: createSvgIcon(svgIcon),
-  iconFormat: name => `fa fa-${name}`,
+  iconFormat: (name) => `fa fa-${name}`,
   style: { background: "#3b5998" },
-  activeStyle: { background: "#293e69" }
+  activeStyle: { background: "#293e69" },
 };
 ```
 
@@ -264,6 +265,10 @@ If set to true, activeStyles won't be used and will be used styles from the styl
 
 Disables (or enables the button)
 
+### `type` {"button" | "submit" | "reset} (optional)
+
+Sets the button type attribute (default is button)
+
 ### Events
 
 - `onClick`
@@ -281,11 +286,12 @@ I welcome issues and pull requests on https://github.com/MichalSzorad/react-soci
 ## Thanks
 
 Special thanks to people creating awesome svg icons and teams
+
 - [Dinirio](https://www.dinirio.com)
 
 - [SimpleIcon](https://www.flaticon.com/authors/simpleicon)
 
-- [Simple Icons](https://github.com/simple-icons/simple-icons) 
+- [Simple Icons](https://github.com/simple-icons/simple-icons)
 
 - [iconmonstr](https://iconmonstr.com/amazon-1-svg/)
 
