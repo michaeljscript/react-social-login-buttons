@@ -18,3 +18,4 @@ export { default as createSvgIcon } from './createSvgIcon';
 export { default as ZaloLoginButton } from './ZaloLoginButton';
 export { default as TikTokLoginButton } from './TikTokLoginButton';
 export { default as MetamaskLoginButton } from './MetamaskLoginButton';
+export { default as GitlabLoginButton } from './GitlabLoginButton';
