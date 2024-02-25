@@ -6,6 +6,7 @@ type Config = {
   icon?: string | ComponentType<{ size: string | number; color: string }>;
   style?: {};
   text?: string;
+  type?: "button" | "submit" | "reset";
 };
 
 export const createButton = (config?: Config) => (props: SocialLoginButtonProps) => {
