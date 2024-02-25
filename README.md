@@ -7,7 +7,7 @@ A simple package to display social login buttons using React.
 Buttons do not provide any social logic.
 They are only visual components listening to some events triggered by the user.
 
-![Social login buttons](https://raw.githubusercontent.com/michaeljscript/react-social-login-buttons/develop/examples/simple/screenshot6.png)
+![Social login buttons](https://raw.githubusercontent.com/michaeljscript/react-social-login-buttons/develop/examples/simple/screenshot7.png)
 
 ## Install
 
@@ -79,6 +79,12 @@ We currently support just a few login buttons. Others will be implemented later.
 
 ```jsx
 <TwitterLoginButton onClick={() => alert("Hello")} />
+```
+
+#### XLoginButton
+
+```jsx
+<XLoginButton onClick={() => alert("Hello")} />
 ```
 
 #### AmazonLoginButton
