@@ -20,8 +20,7 @@
     "skipLibCheck": true,
     "sourceRoot": "" /* Specify the location where debugger should locate TypeScript files instead of source locations. */,
     "mapRoot": "" /* Specify the location where debugger should locate map files instead of generated locations. */,
-    "forceConsistentCasingInFileNames": true,
-    /* Disallow inconsistently-cased references to the same file. */
+    "forceConsistentCasingInFileNames": true, /* Disallow inconsistently-cased references to the same file. */
     "jsx": "react"
   }
 }
