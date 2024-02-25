@@ -41,6 +41,7 @@
     "slack",
     "okta",
     "Yahoo",
+    "gitlab",
     "react-social-login-buttons"
   ],
   "author": "Michal Szorad, miso.szorad@gmail.com",
