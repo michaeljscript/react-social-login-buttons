@@ -1,9 +1,9 @@
 {
   "name": "react-social-login-buttons",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Simple social login buttons for React",
   "main": "./dist/index.js",
-  "types": "./src/types.d.ts",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "test": "jest",
     "lint": "prettier --check .",
