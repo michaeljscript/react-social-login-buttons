@@ -18,3 +18,4 @@ export { ZaloLoginButton } from "./ZaloLoginButton";
 export { TikTokLoginButton } from "./TikTokLoginButton";
 export { MetamaskLoginButton } from "./MetamaskLoginButton";
 export { GitlabLoginButton } from "./GitlabLoginButton";
+export { XLoginButton } from "./XLoginButton";

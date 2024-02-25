@@ -81,6 +81,12 @@ We currently support just a few login buttons. Others will be implemented later.
 <TwitterLoginButton onClick={() => alert("Hello")} />
 ```
 
+#### XLoginButton
+
+```jsx
+<XLoginButton onClick={() => alert("Hello")} />
+```
+
 #### AmazonLoginButton
 
 ```jsx
