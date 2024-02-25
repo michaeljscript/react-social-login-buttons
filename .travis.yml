@@ -1,7 +1,9 @@
 language: node_js
 node_js:
-  - "10"
-  - "12"
+  - "16"
+  - "18"
+  - "20"
+  - "21"
 
 cache:
   directories:
