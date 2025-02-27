@@ -1,6 +1,6 @@
 {
   "name": "react-social-login-buttons",
-  "version": "4.1.0",
+  "version": "4.1.1",
   "description": "Simple social login buttons for React",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -47,34 +47,34 @@
   "about": "This is my first library, please be nice to me",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/MichalSzorad/react-social-login-buttons/issues"
+    "url": "https://github.com/michaeljscript/react-social-login-buttons/issues"
   },
-  "homepage": "https://github.com/MichalSzorad/react-social-login-buttons#readme",
+  "homepage": "https://github.com/michaeljscript/react-social-login-buttons#readme",
   "peerDependencies": {
-    "react": "^16.0.0 || ^17.x || ^18.x"
+    "react": "^16.0.0 || ^17.x || ^18.x || ^19.x"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "^7.6.17",
-    "@storybook/addon-interactions": "^7.6.17",
-    "@storybook/addon-links": "^7.6.17",
-    "@storybook/addon-onboarding": "^1.0.11",
-    "@storybook/blocks": "^7.6.17",
-    "@storybook/react": "^7.6.17",
-    "@storybook/react-vite": "^7.6.17",
-    "@storybook/test": "^7.6.17",
-    "@testing-library/react": "^14.2.1",
+    "@storybook/addon-essentials": "^8.6.0",
+    "@storybook/addon-interactions": "^8.6.0",
+    "@storybook/addon-links": "^8.6.0",
+    "@storybook/addon-onboarding": "^8.6.0",
+    "@storybook/blocks": "^8.6.0",
+    "@storybook/react": "^8.6.0",
+    "@storybook/react-vite": "^8.6.0",
+    "@storybook/test": "^8.6.0",
+    "@testing-library/react": "^16.2.0",
     "@types/jest": "^29.5.12",
-    "@types/react": "^18.2.58",
+    "@types/react": "19.0.10",
     "eslint-plugin-storybook": "^0.8.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "prettier": "^3.2.5",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "storybook": "^7.6.17",
+    "react": "19.0.0",
+    "react-dom": "^19.0.0",
+    "storybook": "^8.6.0",
     "ts-jest": "^29.1.2",
-    "tsup": "^8.0.2",
-    "typescript": "^5.2.0"
+    "tsup": "^8.4.0",
+    "typescript": "^5.7.3"
   },
   "tsup": {
     "dts": true
