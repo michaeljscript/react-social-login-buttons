@@ -10,5 +10,4 @@ export const Icon = ({ name, size, format }: Props) => {
   return <i className={format(name)} style={{ fontSize: size }} />;
 };
 
-
 export default Icon;

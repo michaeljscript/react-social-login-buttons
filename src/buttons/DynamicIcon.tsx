@@ -11,10 +11,5 @@ type Props = {
 export const DynamicIcon = ({ type: Component, size, format, color = "#FFFFFF" }: Props) => {
   const renderIElement = typeof Component === "string";
 
-  return renderIElement ? (
-    <Icon {...{ format, name: Component, size }} />
-  ) : (
-    <Component size={size} color={color} />
-  );
+  return renderIElement ? <Icon {...{ format, name: Component, size }} /> : <Component size={size} color={color} />;
 };
-
