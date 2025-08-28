@@ -19,3 +19,5 @@ export { TikTokLoginButton } from "./TikTokLoginButton";
 export { MetamaskLoginButton } from "./MetamaskLoginButton";
 export { GitlabLoginButton } from "./GitlabLoginButton";
 export { XLoginButton } from "./XLoginButton";
+export { TwitchLoginButton } from "./TwitchLoginButton";
+export { KickLoginButton } from "./KickLoginButton";

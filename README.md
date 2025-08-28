@@ -177,6 +177,18 @@ We currently support just a few login buttons. Others will be implemented later.
 <GitlabLoginButton onClick={() => alert("Hello")} />
 ```
 
+### TwitchLoginButton
+
+```jsx
+<TwitchLoginButton onClick={() => alert("Hello")} />
+```
+
+### KickLoginButton
+
+```jsx
+<KickLoginButton onClick={() => alert("Hello")} />
+```
+
 ## Create your own button
 
 You can create your own button.
@@ -207,7 +219,6 @@ export default MyFacebookLoginButton;
 Config can also look like.
 
 ```js
-
 const config = {
   text: "Log in with Facebook",
   icon: MyIconComponent,
